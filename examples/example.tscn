@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://examples/resources/theme.tres" type="Theme" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Label
+
+func _ready():
+  set_text(get_parent().get_name())
+"
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Button
+
+func _on_BackButton_pressed():
+  get_tree().change_scene('res://examples/examples.tscn')
+"
+
+[node name="Example" type="Node2D"]
+
+[node name="ExampleName" type="Label" parent="."]
+margin_left = 112.0
+margin_top = 17.0
+margin_right = 482.0
+margin_bottom = 74.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+theme = ExtResource( 1 )
+text = "<Example Name>"
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="."]
+modulate = Color( 0.6, 0.721569, 0.596078, 1 )
+margin_left = 17.0
+margin_top = 43.0
+margin_right = 289.0
+margin_bottom = 73.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+theme = ExtResource( 1 )
+text = "< Return to example selection"
+flat = true
+script = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 25.0
+margin_top = 17.0
+margin_right = 105.0
+margin_bottom = 41.0
+theme = ExtResource( 1 )
+text = "Example:"
+
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_BackButton_pressed"]

@@ -1,0 +1,84 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "InputEventAction",
+"class": "InputEventSwipe",
+"language": "GDScript",
+"path": "res://SwipeModule/InputEventSwipe.gd"
+}, {
+"base": "_SwipeEventCore",
+"class": "SwipeModule",
+"language": "GDScript",
+"path": "res://SwipeModule/SwipeModule.gd"
+}, {
+"base": "InputEventAction",
+"class": "ThrowedFooter",
+"language": "GDScript",
+"path": "res://SwipeModule/ThrowedFooter.gd"
+}, {
+"base": "InputEventAction",
+"class": "ThrowedHeader",
+"language": "GDScript",
+"path": "res://SwipeModule/ThrowedHeader.gd"
+}, {
+"base": "Node",
+"class": "_SwipeEventCore",
+"language": "GDScript",
+"path": "res://SwipeModule/_SwipeEventCore.gd"
+} ]
+_global_script_class_icons={
+"InputEventSwipe": "res://SwipeModule/SwipeEventCore.png",
+"SwipeModule": "",
+"ThrowedFooter": "res://SwipeModule/SwipeEventCore.png",
+"ThrowedHeader": "res://SwipeModule/SwipeEventCore.png",
+"_SwipeEventCore": "res://SwipeModule/SwipeEventCore.png"
+}
+
+[application]
+
+config/name="GrasCut"
+run/main_scene="res://res/level/level_1.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+GamePlay="*res://src/core/GamePlay.gd"
+
+[display]
+
+window/size/width=720
+window/size/height=1280
+window/size/test_width=360
+window/size/test_height=640
+window/handheld/orientation="portrait"
+window/stretch/mode="2d"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/swipe-detector/plugin.cfg" )
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_render/layer_1="environment"
+2d_render/layer_2="player"
+2d_render/layer_3="grass"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

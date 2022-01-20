@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Point" type="Label" parent="."]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 57.0
+margin_bottom = 57.0
+text = "20"
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://examples/example.tscn" type="PackedScene" id=1]
+[ext_resource path="res://examples/gesture-detection/gesture_detection_example.gd" type="Script" id=2]
+[ext_resource path="res://examples/resources/theme.tres" type="Theme" id=3]
+[ext_resource path="res://addons/swipe-detector/swipe_detector.gd" type="Script" id=4]
+[ext_resource path="res://addons/swipe-detector/icon.png" type="Texture" id=5]
+[ext_resource path="res://examples/gesture-detection/trail_ghost.tscn" type="PackedScene" id=6]
+[ext_resource path="res://examples/resources/spot_red.png" type="Texture" id=7]
+[ext_resource path="res://examples/resources/Trail.tscn" type="PackedScene" id=8]
+
+[node name="GestureDetectionExample" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="RecordedGesture" type="Node2D" parent="." index="3"]
+
+[node name="MatchGesture" type="Node2D" parent="." index="4"]
+
+[node name="RecordingLabel" type="Label" parent="." index="5"]
+visible = false
+margin_left = 414.0
+margin_top = 292.0
+margin_right = 518.0
+margin_bottom = 316.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Recording..."
+
+[node name="SwipeDetector" type="Node" parent="." index="6"]
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_icon": ExtResource( 5 )
+}
+distance_threshold = 80.0
+minimum_points = 3
+
+[node name="RecordButton" type="Button" parent="." index="7"]
+margin_left = 707.0
+margin_top = 550.0
+margin_right = 926.0
+margin_bottom = 612.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+theme = ExtResource( 3 )
+text = "Record Gesture"
+
+[node name="RecordingState" parent="." index="8" instance=ExtResource( 6 )]
+modulate = Color( 1, 1, 1, 0.3 )
+position = Vector2( 655.016, 578.089 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="Match" type="VBoxContainer" parent="." index="9"]
+visible = false
+margin_left = 18.0
+margin_top = 529.0
+margin_right = 112.0
+margin_bottom = 567.0
+rect_scale = Vector2( 2, 2 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_constants/separation = 10
+
+[node name="ResultLabel" type="Label" parent="Match" index="0"]
+margin_left = -2.0
+margin_top = 28.0
+margin_right = 104.0
+margin_bottom = 42.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Match Detected!"
+
+[node name="Trail" parent="." index="10" instance=ExtResource( 8 )]
+
+[connection signal="pattern_detected" from="SwipeDetector" to="." method="_on_SwipeDetector_pattern_detected"]
+[connection signal="swipe_ended" from="SwipeDetector" to="." method="_on_SwipeDetector_swipe_ended"]
+[connection signal="swipe_started" from="SwipeDetector" to="." method="_on_SwipeDetector_swipe_started"]
+[connection signal="swipe_updated" from="SwipeDetector" to="." method="_on_SwipeDetector_swipe_updated"]
+[connection signal="pressed" from="RecordButton" to="." method="_on_RecordButton_pressed"]
