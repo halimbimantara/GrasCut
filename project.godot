@@ -96,4 +96,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation.mobile=2
+quality/subsurface_scattering/quality=2
 environment/default_environment="res://default_env.tres"

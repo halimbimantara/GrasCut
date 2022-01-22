@@ -13,4 +13,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	rotate_y(deg2rad(180 * delta))
+	rotate_y(deg2rad(180 * delta)*10)
