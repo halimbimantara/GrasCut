@@ -1,101 +1,159 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://res/item/GrassObj.tscn" type="PackedScene" id=1]
-[ext_resource path="res://res/player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://addons/swipe-detector/swipe_detector.tscn" type="PackedScene" id=3]
-[ext_resource path="res://res/ui/HUD.tscn" type="PackedScene" id=4]
-[ext_resource path="res://res/ui/HUD.gd" type="Script" id=5]
-[ext_resource path="res://assets/environment/tanks_crateWood.png" type="Texture" id=6]
+[ext_resource path="res://res/player/Saw.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/swipe-detector/swipe_detector.tscn" type="PackedScene" id=2]
+[ext_resource path="res://res/item/GrassItem.tscn" type="PackedScene" id=3]
+[ext_resource path="res://res/item/environment.meshlib" type="MeshLibrary" id=4]
+[ext_resource path="res://res/ui/HUD.tscn" type="PackedScene" id=5]
+[ext_resource path="res://res/level/Level13D.gd" type="Script" id=6]
+[ext_resource path="res://res/level/Grass.gd" type="Script" id=7]
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 111, 114, 3, 114, 3, 2, 111, 2 )
+[sub_resource type="SpatialMaterial" id=1]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 0.65098, 0.866667, 0.933333, 1 )
 
-[sub_resource type="TileSet" id=1]
-0/name = "tanks_crateWood.png 0"
-0/texture = ExtResource( 6 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( -7, -6, 117, 114 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 2 )
-0/shape_one_way = false
-0/shape_one_way_margin = 1.0
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 2 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-0/z_index = 0
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 1 )
+direction = Vector3( 0, 360, 0 )
+gravity = Vector3( 0, 0, 0 )
+radial_accel = 32.78
 
-[node name="Level1" type="Node2D"]
+[sub_resource type="SpatialMaterial" id=5]
+flags_transparent = true
+flags_unshaded = true
+params_blend_mode = 1
+params_cull_mode = 2
+albedo_color = Color( 0.909804, 0.34902, 0.156863, 1 )
 
-[node name="SwipeDetector" parent="." instance=ExtResource( 3 )]
+[sub_resource type="QuadMesh" id=4]
+material = SubResource( 5 )
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
-cell_size = Vector2( 120, 120 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 65536, 0, 0, 65541, 0, 0, 131072, 0, 0, 131077, 0, 0, 196608, 0, 0, 196613, 0, 0, 262144, 0, 0, 262146, 0, 0, 262147, 0, 0, 262149, 0, 0, 327680, 0, 0, 327682, 0, 0, 327683, 0, 0, 327685, 0, 0, 393216, 0, 0, 393221, 0, 0, 458752, 0, 0, 458757, 0, 0, 524288, 0, 0, 524293, 0, 0, 589824, 0, 0, 589826, 0, 0, 589827, 0, 0, 589829, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 917538, 0, 0 )
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 6 )
 
-[node name="GrassGroup" type="Node2D" parent="."]
+[node name="SwipeDetector" parent="." instance=ExtResource( 2 )]
 
-[node name="Grass" parent="GrassGroup" instance=ExtResource( 1 )]
-position = Vector2( 179, 727 )
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.25419, 0, 0, 1.60205 )
+use_collision = true
+width = 26.9598
+height = 0.002
+depth = 41.1099
+material = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Grass2" parent="GrassGroup" instance=ExtResource( 1 )]
-position = Vector2( 182, 857 )
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 4 )
+data = {
+"cells": PoolIntArray( 0, 0, 1, 1, 0, 1, 3, 0, 1, 65532, 0, 1, 65533, 0, 1, 65534, 0, 1, 0, 1, 1, 1, 1, 1, 3, 1, 1, 65532, 1, 1, 65533, 1, 1, 65534, 1, 1, 0, 2, 1, 3, 2, 1, 65532, 2, 1, 0, 3, 1, 1, 3, 1, 2, 3, 1, 3, 3, 1, 65532, 3, 1, 65533, 3, 1, 65534, 3, 1, 65535, 3, 1, 0, 65528, 1, 1, 65528, 1, 2, 65528, 1, 3, 65528, 1, 65532, 65528, 1, 65533, 65528, 1, 65534, 65528, 1, 65535, 65528, 1, 3, 65529, 1, 65532, 65529, 1, 0, 65530, 1, 1, 65530, 1, 3, 65530, 1, 65532, 65530, 1, 65534, 65530, 1, 65535, 65530, 1, 1, 65531, 1, 3, 65531, 1, 65532, 65531, 1, 65534, 65531, 1, 1, 65532, 1, 3, 65532, 1, 65532, 65532, 1, 65534, 65532, 1, 0, 65533, 1, 1, 65533, 1, 3, 65533, 1, 65532, 65533, 1, 65534, 65533, 1, 3, 65534, 1, 65532, 65534, 1, 1, 65535, 0, 3, 65535, 1, 65532, 65535, 1 )
+}
+__meta__ = {
+"_editor_clip_": 0
+}
 
-[node name="Grass3" parent="GrassGroup" instance=ExtResource( 1 )]
-position = Vector2( 176, 990 )
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 30, 0 )
 
-[node name="Grass4" parent="GrassGroup" instance=ExtResource( 1 )]
-position = Vector2( 173, 1128 )
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.924566, -0.366075, -0.105676, -0.240193, -0.344674, -0.907473, 0.295779, 0.864401, -0.406603, 0, 13.4744, 0 )
 
-[node name="Grass5" parent="GrassGroup" instance=ExtResource( 1 )]
-position = Vector2( 536, 727 )
+[node name="Grass" type="Spatial" parent="."]
+script = ExtResource( 7 )
 
-[node name="Grass6" parent="GrassGroup" instance=ExtResource( 1 )]
-position = Vector2( 539, 860 )
+[node name="GrassItem" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.92304, 0, -12.7021 )
 
-[node name="Grass7" parent="GrassGroup" instance=ExtResource( 1 )]
-position = Vector2( 540, 993 )
+[node name="GrassItem2" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86622, 0, -12.7021 )
 
-[node name="Grass9" parent="GrassGroup" instance=ExtResource( 1 )]
-position = Vector2( 367, 197 )
-rotation = 1.55066
+[node name="GrassItem3" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.830104, 0, -12.7021 )
 
-[node name="Grass10" parent="GrassGroup" instance=ExtResource( 1 )]
-position = Vector2( 189, 199 )
-rotation = 1.55066
+[node name="GrassItem4" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03752, 0, -12.7021 )
 
-[node name="Grass11" parent="GrassGroup" instance=ExtResource( 1 )]
-position = Vector2( 531, 195 )
-rotation = 1.55066
+[node name="GrassItem5" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03471, 0, -12.7021 )
 
-[node name="Grass8" parent="GrassGroup" instance=ExtResource( 1 )]
-position = Vector2( 540, 1128 )
+[node name="GrassItem6" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98519, 0, -12.7021 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 351, 1006 )
+[node name="GrassItem7" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98519, 0, -9.67261 )
 
-[node name="HUD" parent="." instance=ExtResource( 4 )]
-script = ExtResource( 5 )
+[node name="GrassItem8" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98519, 0, -6.98897 )
+
+[node name="GrassItem9" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98519, 0, -4.25957 )
+
+[node name="GrassItem10" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25792, 0, -9.93957 )
+
+[node name="GrassItem11" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25792, 0, -7.67247 )
+
+[node name="GrassItem12" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25792, 0, -5.23253 )
+
+[node name="GrassItem13" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25792, 0, -2.95223 )
+
+[node name="GrassItem14" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.15551, 0, -2.95223 )
+
+[node name="GrassItem15" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.229755, 0, -2.95223 )
+
+[node name="GrassItem16" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49936, 0, -2.95223 )
+
+[node name="GrassItem17" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06626, 0, -1.37148 )
+
+[node name="GrassItem18" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06626, 0, 1.86417 )
+
+[node name="GrassItem19" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.38555, 0, 4.71077 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.98258, 1.23563, 4.98903 )
+
+[node name="particle_congrate" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.0403759, 0.999185, 0, -0.999185, 0.0403759, 0, 5.24733, 0 )
+emitting = false
+amount = 40
+preprocess = 1.0
+explosiveness = 1.0
+randomness = 1.0
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 4 )
+
+[node name="HUD" parent="." instance=ExtResource( 5 )]
 
 [connection signal="swiped" from="SwipeDetector" to="Player" method="_on_SwipeDetector_swiped"]
-[connection signal="update_point" from="GrassGroup/Grass" to="HUD" method="_on_Grass_update_point"]
-[connection signal="update_point" from="GrassGroup/Grass2" to="HUD" method="_on_Grass_update_point"]
-[connection signal="update_point" from="GrassGroup/Grass3" to="HUD" method="_on_Grass_update_point"]
-[connection signal="update_point" from="GrassGroup/Grass4" to="HUD" method="_on_Grass_update_point"]
-[connection signal="update_point" from="GrassGroup/Grass5" to="HUD" method="_on_Grass_update_point"]
-[connection signal="update_point" from="GrassGroup/Grass6" to="HUD" method="_on_Grass_update_point"]
-[connection signal="update_point" from="GrassGroup/Grass7" to="HUD" method="_on_Grass_update_point"]
-[connection signal="update_point" from="GrassGroup/Grass9" to="HUD" method="_on_Grass_update_point"]
-[connection signal="update_point" from="GrassGroup/Grass10" to="HUD" method="_on_Grass_update_point"]
-[connection signal="update_point" from="GrassGroup/Grass11" to="HUD" method="_on_Grass_update_point"]
-[connection signal="update_point" from="GrassGroup/Grass8" to="HUD" method="_on_Grass_update_point"]
+[connection signal="endLevel" from="Grass" to="." method="_on_Grass_endLevel"]
+[connection signal="showflower" from="Grass/GrassItem" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem2" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem3" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem4" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem5" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem6" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem7" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem8" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem9" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem10" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem11" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem12" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem13" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem14" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem15" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem16" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem17" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem18" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem19" to="Grass" method="_on_GrassItem_showflower"]

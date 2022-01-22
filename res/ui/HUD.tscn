@@ -1,13 +1,38 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
 
-[node name="Control" type="Control"]
+[ext_resource path="res://assets/HUD/RepeatPNG.png" type="Texture" id=1]
+[ext_resource path="res://assets/Fonts/Yeyey-1pK2.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://res/ui/HUD.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="HUD" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Point" type="Label" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -360.0
+margin_right = 360.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="HBoxContainer"]
+margin_right = 237.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="Point" type="Label" parent="HBoxContainer/Control"]
+visible = false
 margin_left = 15.0
 margin_top = 15.0
 margin_right = 57.0
@@ -18,3 +43,33 @@ clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Center" type="Control" parent="HBoxContainer"]
+margin_left = 241.0
+margin_right = 478.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="LevelInfo" type="Label" parent="HBoxContainer/Center"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "LEVEL 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeaderRight" type="Control" parent="HBoxContainer"]
+margin_left = 482.0
+margin_right = 720.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 3
+
+[node name="RepeatPng" type="TouchScreenButton" parent="HBoxContainer/HeaderRight"]
+position = Vector2( 148, 16 )
+scale = Vector2( 0.215152, 0.218182 )
+normal = ExtResource( 1 )
+action = "ui_accept"

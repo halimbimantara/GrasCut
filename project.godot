@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Control",
+"class": "BPBP_Main",
+"language": "GDScript",
+"path": "res://addons/bpb_placement/bpbp_main.gd"
+}, {
 "base": "InputEventAction",
 "class": "InputEventSwipe",
 "language": "GDScript",
@@ -35,6 +40,7 @@ _global_script_classes=[ {
 "path": "res://SwipeModule/_SwipeEventCore.gd"
 } ]
 _global_script_class_icons={
+"BPBP_Main": "",
 "InputEventSwipe": "res://SwipeModule/SwipeEventCore.png",
 "SwipeModule": "",
 "ThrowedFooter": "res://SwipeModule/SwipeEventCore.png",
@@ -45,12 +51,13 @@ _global_script_class_icons={
 [application]
 
 config/name="GrasCut"
-run/main_scene="res://res/level/level_1.tscn"
+run/main_scene="res://res/ui/Splash.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 GamePlay="*res://src/core/GamePlay.gd"
+SceneFade="*res://res/ui/SceneFade.tscn"
 
 [display]
 
@@ -63,7 +70,15 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/swipe-detector/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/scatter/plugin.cfg", "res://addons/swipe-detector/plugin.cfg" )
+
+[input]
+
+jump={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [input_devices]
 

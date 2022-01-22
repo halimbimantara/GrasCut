@@ -18,23 +18,21 @@ _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.703971, 360 ), 1758.36, 0.
 curve = SubResource( 4 )
 
 [sub_resource type="ParticlesMaterial" id=6]
-emission_shape = 5
-emission_ring_radius = 2.0
-emission_ring_inner_radius = 0.0
-emission_ring_height = 1.0
-emission_ring_axis = Vector3( 0, 0, 1 )
+emission_shape = 3
+emission_point_count = 1
 flag_rotate_y = true
 flag_disable_z = true
 direction = Vector3( 0, 2, 0 )
-gravity = Vector3( 10, 0, 0 )
+gravity = Vector3( 0, 0, 0 )
 initial_velocity = 270.66
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
+orbit_velocity = 1.0
+orbit_velocity_random = 1.0
 linear_accel = 13.51
 linear_accel_random = 0.14
 damping_random = 0.19
-angle = -408.6
+angle = 360.0
 angle_curve = SubResource( 5 )
+color = Color( 0.901961, 0.341176, 0.227451, 1 )
 
 [sub_resource type="SpatialMaterial" id=7]
 
