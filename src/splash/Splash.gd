@@ -11,5 +11,6 @@ func _ready():
 
 func _on_Tween_tween_all_completed():
 #	GamePlay.fader.fade_out()
+	Audio.playBGMusic()
 	assert(get_tree().change_scene("res://res/level/Level_" + str(GamePlay.current_level) +".tscn") == OK)
 

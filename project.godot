@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "AdMob",
+"language": "GDScript",
+"path": "res://lib/admob-lib/admob.gd"
+}, {
 "base": "Control",
 "class": "BPBP_Main",
 "language": "GDScript",
@@ -18,6 +23,11 @@ _global_script_classes=[ {
 "class": "InputEventSwipe",
 "language": "GDScript",
 "path": "res://SwipeModule/InputEventSwipe.gd"
+}, {
+"base": "Node",
+"class": "OneSignal",
+"language": "GDScript",
+"path": "res://lib/onesignal-plugin-api/onesignal.gd"
 }, {
 "base": "_SwipeEventCore",
 "class": "SwipeModule",
@@ -40,8 +50,10 @@ _global_script_classes=[ {
 "path": "res://SwipeModule/_SwipeEventCore.gd"
 } ]
 _global_script_class_icons={
+"AdMob": "res://lib/admob-lib/icon.png",
 "BPBP_Main": "",
 "InputEventSwipe": "res://SwipeModule/SwipeEventCore.png",
+"OneSignal": "res://lib/onesignal-plugin-api/onesignal.png",
 "SwipeModule": "",
 "ThrowedFooter": "res://SwipeModule/SwipeEventCore.png",
 "ThrowedHeader": "res://SwipeModule/SwipeEventCore.png",
@@ -58,6 +70,8 @@ config/icon="res://icon.png"
 
 GamePlay="*res://src/core/GamePlay.gd"
 SceneFade="*res://res/ui/SceneFade.tscn"
+Onesignal="*res://lib/onesignal-plugin-api/onesignal.gd"
+Audio="*res://res/item/Audio.tscn"
 
 [display]
 
