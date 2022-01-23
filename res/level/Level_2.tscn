@@ -58,7 +58,8 @@ __meta__ = {
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 30, -1.87449 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.924566, -0.366074, -0.105676, 0.262534, 0.813062, -0.519621, 0.276141, 0.45268, 0.847837, 0, 6.1092, 1.96733 )
+transform = Transform( 0.924566, -0.366075, -0.105676, 0.270489, 0.435266, 0.858708, -0.268354, -0.822516, 0.501451, 0, 11.5143, 2.65751 )
+light_energy = 2.0
 
 [node name="Grass" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.670493, 0 )

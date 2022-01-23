@@ -37,10 +37,10 @@ surfaces/0 = {
 
 [sub_resource type="MultiMesh" id=26]
 transform_format = 1
-instance_count = 11
-visible_instance_count = 11
+instance_count = 8
+visible_instance_count = 8
 mesh = SubResource( 29 )
-transform_array = PoolVector3Array( 5.95148, 0, 0.613531, 0, 5.98302, 0, -0.613531, 0, 5.95148, -3.2103, 0, -11.9426, -0.30093, 0, -7.80025, 0, 7.80605, 0, 7.80025, 0, -0.30093, -3.41128, 0, -11.6559, -7.09853, 0, -3.42936, 0, 7.8835, 0, 3.42936, 0, -7.09853, -3.28107, 0, -12.2671, -5.79624, 0, -3.61283, 0, 6.83, 0, 3.61283, 0, -5.79624, -3.36815, 0, -12.0867, -2.51719, 0, 7.27394, 0, 7.69717, 0, -7.27394, 0, -2.51719, -3.30809, 0, -12.5124, 4.83359, 0, 4.46759, 0, 6.58202, 0, -4.46759, 0, 4.83359, -3.02872, 0, -12.4244, -3.76045, 0, 4.90929, 0, 6.18402, 0, -4.90929, 0, -3.76045, -3.23378, 0, -12.092, -0.165352, 0, 4.82324, 0, 4.82607, 0, -4.82324, 0, -0.165352, -3.22803, 0, -12.0528, -5.18514, 0, -2.9019, 0, 5.94195, 0, 2.9019, 0, -5.18514, -3.49793, 0, -11.7973, 2.75569, 0, 4.87066, 0, 5.59617, 0, -4.87066, 0, 2.75569, -3.19444, 0, -11.6786, 7.11848, 0, 4.78192, 0, 8.57551, 0, -4.78192, 0, 7.11848, -3.32262, 0, -12.3789 )
+transform_array = PoolVector3Array( 5.95148, 0, 0.613531, 0, 5.98302, 0, -0.613531, 0, 5.95148, -3.2103, 0, -11.9426, -0.30093, 0, -7.80025, 0, 7.80605, 0, 7.80025, 0, -0.30093, -3.41128, 0, -11.6559, -7.09853, 0, -3.42936, 0, 7.8835, 0, 3.42936, 0, -7.09853, -3.28107, 0, -12.2671, -5.79624, 0, -3.61283, 0, 6.83, 0, 3.61283, 0, -5.79624, -3.36815, 0, -12.0867, -2.51719, 0, 7.27394, 0, 7.69717, 0, -7.27394, 0, -2.51719, -3.30809, 0, -12.5124, 4.83359, 0, 4.46759, 0, 6.58202, 0, -4.46759, 0, 4.83359, -3.02872, 0, -12.4244, -3.76045, 0, 4.90929, 0, 6.18402, 0, -4.90929, 0, -3.76045, -3.23378, 0, -12.092, -0.165352, 0, 4.82324, 0, 4.82607, 0, -4.82324, 0, -0.165352, -3.22803, 0, -12.0528 )
 
 [sub_resource type="ArrayMesh" id=30]
 surfaces/0 = {
@@ -58,10 +58,10 @@ surfaces/0 = {
 
 [sub_resource type="MultiMesh" id=28]
 transform_format = 1
-instance_count = 9
-visible_instance_count = 9
+instance_count = 12
+visible_instance_count = 12
 mesh = SubResource( 30 )
-transform_array = PoolVector3Array( -8.98806, 0, 4.32457, 0, 9.97432, 0, -4.32457, 0, -8.98806, -3.29672, 0, -12.0656, -6.33424, 0, -5.77937, 0, 8.5746, 0, 5.77937, 0, -6.33424, -3.42977, 0, -11.827, 7.64191, 0, -0.451147, 0, 7.65522, 0, 0.451147, 0, 7.64191, -3.54366, 0, -11.9704, 0.645615, 0, -6.21346, 0, 6.24691, 0, 6.21346, 0, 0.645615, -2.99251, 0, -11.8037, 6.0098, 0, -4.30171, 0, 7.3907, 0, 4.30171, 0, 6.0098, -2.92369, 0, -11.7962, 3.11691, 0, 9.05866, 0, 9.5799, 0, -9.05866, 0, 3.11691, -3.25302, 0, -11.5511, -5.49855, 0, 4.3104, 0, 6.98667, 0, -4.3104, 0, -5.49855, -3.19373, 0, -11.905, -7.04975, 0, 3.46433, 0, 7.85497, 0, -3.46433, 0, -7.04975, -3.33474, 0, -11.9316, -5.3084, 0, -5.16091, 0, 7.40366, 0, 5.16091, 0, -5.3084, -3.13023, 0, -11.7481 )
+transform_array = PoolVector3Array( -5.76127, 0, -3.22433, 0, 6.60216, 0, 3.22433, 0, -5.76127, -3.49793, 0, -11.7973, 3.06187, 0, 5.41184, 0, 6.21796, 0, -5.41184, 0, 3.06187, -3.19444, 0, -11.6786, 7.90942, 0, 5.31324, 0, 9.52835, 0, -5.31324, 0, 7.90942, -3.32262, 0, -12.3789, -8.98806, 0, 4.32457, 0, 9.97432, 0, -4.32457, 0, -8.98806, -3.29672, 0, -12.0656, -6.33424, 0, -5.77937, 0, 8.5746, 0, 5.77937, 0, -6.33424, -3.42977, 0, -11.827, 7.64191, 0, -0.451147, 0, 7.65522, 0, 0.451147, 0, 7.64191, -3.54366, 0, -11.9704, 0.645615, 0, -6.21346, 0, 6.24691, 0, 6.21346, 0, 0.645615, -2.99251, 0, -11.8037, 6.0098, 0, -4.30171, 0, 7.3907, 0, 4.30171, 0, 6.0098, -2.92369, 0, -11.7962, 3.11691, 0, 9.05866, 0, 9.5799, 0, -9.05866, 0, 3.11691, -3.25302, 0, -11.5511, -5.49855, 0, 4.3104, 0, 6.98667, 0, -4.3104, 0, -5.49855, -3.19373, 0, -11.905, -7.04975, 0, 3.46433, 0, 7.85497, 0, -3.46433, 0, -7.04975, -3.33474, 0, -11.9316, -5.3084, 0, -5.16091, 0, 7.40366, 0, 5.16091, 0, -5.3084, -3.13023, 0, -11.7481 )
 
 [sub_resource type="ParticlesMaterial" id=21]
 emission_shape = 1
@@ -146,7 +146,7 @@ curve = SubResource( 24 )
 script = ExtResource( 1 )
 global_seed = 1
 preview_count = 1
-modifier_stack = Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/core/modifier_stack.gd" ),"stack":[ Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/modifiers/distribute_inside_random.gd" ),"enabled":true,"display_name":"Distribute Inside (Random)","category":"Distribute","warning":"","warning_ignore_no_transforms":true,"warning_ignore_no_path":false,"override_global_seed":true,"custom_seed":0,"instance_count":20,"_rng":Object(RandomNumberGenerator,"seed":-4154342609324188227,"state":4932418443101028312,"script":null)
+modifier_stack = Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/core/modifier_stack.gd" ),"stack":[ Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/modifiers/distribute_inside_random.gd" ),"enabled":true,"display_name":"Distribute Inside (Random)","category":"Distribute","warning":"","warning_ignore_no_transforms":true,"warning_ignore_no_path":false,"override_global_seed":true,"custom_seed":0,"instance_count":20,"_rng":Object(RandomNumberGenerator,"seed":3576043008314583589,"state":7790856509020423712,"script":null)
 )
 , Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/modifiers/randomize_transforms.gd" ),"enabled":true,"display_name":"Randomize Transforms","category":"Edit","warning":"","warning_ignore_no_transforms":false,"warning_ignore_no_path":true,"override_global_seed":false,"custom_seed":5,"local_space":true,"position":Vector3( 0.3, 0, 0.2 ),"rotation":Vector3( 0, 300, 0 ),"scale":Vector3( 1, 1, 1 ),"_rng":Object(RandomNumberGenerator,"seed":-6915808713028927208,"state":5253039476560501719,"script":null)
 )
@@ -173,7 +173,7 @@ __meta__ = {
 [node name="Flower" type="Spatial" parent="GrassScatter"]
 visible = false
 script = ExtResource( 2 )
-proportion = 40
+proportion = 70
 item_path = "res://addons/scatter/demos/assets/grass/grass59.tscn"
 scale_modifier = 5.0
 materials = [ null ]
@@ -228,6 +228,9 @@ unit_db = 30.0
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.77385, 9.65746 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+visible = false
 
 [connection signal="body_entered" from="." to="." method="_on_GrassItem_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

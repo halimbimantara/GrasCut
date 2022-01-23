@@ -86,6 +86,10 @@ window/stretch/mode="2d"
 
 enabled=PoolStringArray( "res://addons/scatter/plugin.cfg", "res://addons/swipe-detector/plugin.cfg" )
 
+[global]
+
+color=false
+
 [input]
 
 jump={
