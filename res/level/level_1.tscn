@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://res/player/Saw.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/swipe-detector/swipe_detector.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://res/level/Level13D.gd" type="Script" id=6]
 [ext_resource path="res://res/level/Grass.gd" type="Script" id=7]
 [ext_resource path="res://assets/Particles/transparant/muzzle_03.png" type="Texture" id=8]
+[ext_resource path="res://lib/admob-lib/admob.gd" type="Script" id=9]
 
 [sub_resource type="ProceduralSky" id=7]
 
@@ -49,9 +50,8 @@ bias = 1.5
 normal_bias = 0.0
 propagation = 0.7
 interior = true
-compress = true
 
-[node name="Spatial" type="Spatial"]
+[node name="Level1" type="Spatial"]
 script = ExtResource( 6 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -173,8 +173,14 @@ draw_pass_1 = SubResource( 4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.49484, 1.54394 )
 extents = Vector3( 12.5864, 10, 25.0681 )
 interior = true
-compress = true
 data = SubResource( 6 )
+
+[node name="AdMob" type="Node" parent="."]
+script = ExtResource( 9 )
+banner_on_top = false
+banner_id = "ca-app-pub-3940256099942544/6300978111"
+interstitial_id = "ca-app-pub-3940256099942544/1033173712"
+child_directed = true
 
 [connection signal="swiped" from="SwipeDetector" to="Player" method="_on_SwipeDetector_swiped"]
 [connection signal="endLevel" from="Grass" to="." method="_on_Grass_endLevel"]
@@ -197,3 +203,5 @@ data = SubResource( 6 )
 [connection signal="showflower" from="Grass/GrassItem17" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem18" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem19" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="banner_failed_to_load" from="AdMob" to="." method="_on_AdMob_banner_failed_to_load"]
+[connection signal="banner_loaded" from="AdMob" to="." method="_on_AdMob_banner_loaded"]

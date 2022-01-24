@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://res/player/Saw.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/swipe-detector/swipe_detector.tscn" type="PackedScene" id=2]
@@ -8,6 +8,14 @@
 [ext_resource path="res://res/level/Level13D.gd" type="Script" id=6]
 [ext_resource path="res://res/level/Grass.gd" type="Script" id=7]
 [ext_resource path="res://assets/Particles/transparant/muzzle_03.png" type="Texture" id=8]
+[ext_resource path="res://lib/admob-lib/admob.gd" type="Script" id=9]
+
+[sub_resource type="ProceduralSky" id=7]
+
+[sub_resource type="Environment" id=8]
+background_mode = 2
+background_sky = SubResource( 7 )
+fog_enabled = true
 
 [sub_resource type="SpatialMaterial" id=1]
 flags_transparent = true
@@ -43,8 +51,22 @@ normal_bias = 0.0
 propagation = 0.7
 interior = true
 
-[node name="Spatial" type="Spatial"]
+[node name="Level1" type="Spatial"]
 script = ExtResource( 6 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 8 )
+
+[node name="Light" type="Spatial" parent="."]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Light"]
+transform = Transform( -0.977242, 0.0484872, -0.206513, -0.206726, -0.436012, 0.875875, -0.0475735, 0.898633, 0.436113, 1.42623, 0.85952, 30.9017 )
+shadow_enabled = true
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="Light"]
+transform = Transform( 0.700225, 0.421066, 0.576531, -0.269664, -0.591736, 0.759691, 0.661034, -0.687424, -0.300802, 10.0069, 18.1061, -50.2533 )
+light_energy = 1.5
+shadow_enabled = true
 
 [node name="SwipeDetector" parent="." instance=ExtResource( 2 )]
 
@@ -70,11 +92,6 @@ __meta__ = {
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 30, 0 )
-
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.924566, -0.366074, -0.105676, -0.184712, -0.673206, 0.716014, -0.333256, -0.642482, -0.690041, 0.0589972, 18.1061, -0.853367 )
-light_energy = 2.0
-shadow_enabled = true
 
 [node name="Grass" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.229901, 0 )
@@ -158,6 +175,13 @@ extents = Vector3( 12.5864, 10, 25.0681 )
 interior = true
 data = SubResource( 6 )
 
+[node name="AdMob" type="Node" parent="."]
+script = ExtResource( 9 )
+banner_on_top = false
+banner_id = "ca-app-pub-3940256099942544/6300978111"
+interstitial_id = "ca-app-pub-3940256099942544/1033173712"
+child_directed = true
+
 [connection signal="swiped" from="SwipeDetector" to="Player" method="_on_SwipeDetector_swiped"]
 [connection signal="endLevel" from="Grass" to="." method="_on_Grass_endLevel"]
 [connection signal="showflower" from="Grass/GrassItem" to="Grass" method="_on_GrassItem_showflower"]
@@ -179,3 +203,5 @@ data = SubResource( 6 )
 [connection signal="showflower" from="Grass/GrassItem17" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem18" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem19" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="banner_failed_to_load" from="AdMob" to="." method="_on_AdMob_banner_failed_to_load"]
+[connection signal="banner_loaded" from="AdMob" to="." method="_on_AdMob_banner_loaded"]

@@ -45,7 +45,7 @@ allprojects {
 dependencies {
     implementation libraries.kotlinStdLib
     implementation libraries.androidxFragment
-
+    implementation 'androidx.multidex:multidex:2.0.1'
     if (rootProject.findProject(":lib")) {
         implementation project(":lib")
     } else if (rootProject.findProject(":godot:lib")) {
@@ -72,6 +72,7 @@ dependencies {
     }
 
 //CHUNK_DEPENDENCIES_BEGIN
+implementation 'androidx.multidex:multidex:2.0.1'
 //CHUNK_DEPENDENCIES_END
 }
 
@@ -96,7 +97,7 @@ android {
             String[] export_abi_list = getExportEnabledABIs()
             abiFilters export_abi_list
         }
-
+        multiDexEnabled true
         manifestPlaceholders = [godotEditorVersion: getGodotEditorVersion()]
 
         // Feel free to modify the application id to your own.
@@ -106,6 +107,7 @@ android {
         minSdkVersion getExportMinSdkVersion()
         targetSdkVersion getExportTargetSdkVersion()
 //CHUNK_ANDROID_DEFAULTCONFIG_BEGIN
+multiDexEnabled true
 //CHUNK_ANDROID_DEFAULTCONFIG_END
     }
 

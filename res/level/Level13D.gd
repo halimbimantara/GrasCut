@@ -3,6 +3,10 @@ extends Spatial
 onready var particleFinishLevel = $particle_congrate
 onready var mPlayer = $Player
 
+func _ready():
+	$AdMob.init()
+	$AdMob.load_banner()
+	
 func _input(event):
 	if Input.is_action_pressed("ui_accept"):
 		GamePlay.totalGrassLevel = 0
@@ -25,3 +29,11 @@ func complete_level():
 	GamePlay.fader.fade_out()
 	
 	
+
+
+func _on_AdMob_banner_loaded():
+	pass # Replace with function body.
+
+
+func _on_AdMob_banner_failed_to_load(error_code):
+	 print("Failed Load Banner")

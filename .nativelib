@@ -1,0 +1,16 @@
+{
+    "platforms": [
+        "all", 
+        "android"
+    ], 
+    "packages": {
+        "multidex": {
+            "platforms": [
+                "android"
+            ], 
+            "version": "2.0.1", 
+            "dependencies": []
+        }
+    }, 
+    "id": "6d2b930a-d339-4714-afd4-e90acc512091"
+}
