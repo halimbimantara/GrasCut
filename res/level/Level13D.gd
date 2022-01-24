@@ -11,9 +11,11 @@ func _input(event):
 		
 		
 func _on_Grass_endLevel():
+	Audio.playLevelComplete()
 	particleFinishLevel.emitting = true
 	yield(get_tree().create_timer(1), "timeout")
 	particleFinishLevel.emitting = false
+	Audio.stopLevelComplete()
 	complete_level()
 
 func complete_level():

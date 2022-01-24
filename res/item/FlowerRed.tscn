@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/Item/flower/F_foliageplant_08_00_mt.material" type="Material" id=1]
 
@@ -17,90 +17,15 @@ surfaces/0 = {
 "vertex_count": 1249
 }
 
-[sub_resource type="SpatialMaterial" id=4]
-params_diffuse_mode = 4
-params_specular_mode = 3
-params_blend_mode = 1
-
-[sub_resource type="Shader" id=2]
-code = "shader_type spatial;
-
-render_mode depth_draw_opaque, cull_disabled;
-
-// Texture settings
-uniform sampler2D texture_albedo : hint_albedo;
-uniform sampler2D texture_gradient : hint_albedo;
-uniform sampler2D texture_noise : hint_albedo;
-uniform float alpha_scissor_threshold : hint_range(0.0, 1.0);
-uniform vec4 transmission : hint_color;
-uniform vec4 secondary_color : hint_color;
-uniform float secondary_attenuation = 0.2;
-uniform float grass_height = 1.0;
-
-// Wind settings
-uniform vec2 wind_direction = vec2(1, -0.5);
-uniform float wind_speed = 1.0;
-uniform float wind_strength = 2.0;
-uniform float noise_scale = 20.0;
-
-varying float color;
-varying float height;
-
-void vertex() {
-	height = VERTEX.y;
-	float influence = smoothstep(0, 1, height / 2.0);
-	vec4 world_pos = WORLD_MATRIX * vec4(VERTEX, 1.0);
-	vec2 uv = world_pos.xz / (noise_scale + 1e-2);
-	vec2 panning_uv = uv + fract(TIME * wind_direction * wind_speed);
-	float wind = texture(texture_noise, panning_uv).r * 2.0 - 0.4;
-	color = texture(texture_noise, uv).r;
-	
-	vec2 wind_offset = -wind_direction * wind_strength * influence * wind;
-	world_pos.xz += wind_offset;
-	world_pos.y -= wind * influence * smoothstep(0.0, height, wind_strength);
-	vec4 local_pos = inverse(WORLD_MATRIX) * world_pos;
-	local_pos.x += influence * cos(TIME * 1.0) / 8.0;
-	local_pos.z += influence * sin(TIME * 1.5) / 8.0;
-	
-	VERTEX = local_pos.xyz;
-	NORMAL = vec3(0.0, 1.0, 0.0);
-}
-
-void fragment() {
-	vec4 tex = texture(texture_albedo, UV);
-	if (tex.a < alpha_scissor_threshold) {
-		discard;
-	}
-	
-	TRANSMISSION = transmission.rgb;
-	vec4 gradient = texture(texture_gradient, vec2(height / grass_height, 0.0));
-	float secondary_weight = smoothstep(0.0, 1.0, color - secondary_attenuation);
-	ALBEDO = tex.rbg * gradient.rgb;
-	ALBEDO = mix(ALBEDO, secondary_color.rgb, secondary_weight);
-}"
-
-[sub_resource type="ShaderMaterial" id=3]
-next_pass = SubResource( 4 )
-shader = SubResource( 2 )
-shader_param/alpha_scissor_threshold = 0.396
-shader_param/transmission = null
-shader_param/secondary_color = null
-shader_param/secondary_attenuation = 0.2
-shader_param/grass_height = 1.0
-shader_param/wind_direction = Vector2( 1, -0.5 )
-shader_param/wind_speed = 0.5
-shader_param/wind_strength = 1.0
-shader_param/noise_scale = 20.0
-
 [node name="FlowerRed" type="Spatial"]
 
 [node name="F_foliageplant_08_LOD1_01" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.0336959, -0.999432, 0, 0.999432, 0.0336959, 0, -9.83655, 0 )
-material_override = ExtResource( 1 )
 mesh = SubResource( 1 )
-material/0 = SubResource( 3 )
+material/0 = null
 
 [node name="SpotLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.9257, 0 )
+visible = false
 light_energy = 3.0
 omni_range = 7.0

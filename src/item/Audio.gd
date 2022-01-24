@@ -18,3 +18,10 @@ func playFlowerPop():
 
 func stopFlowerPop():
 	$FlowerPop.stop()
+	
+func playLevelComplete():
+	$LevelComplete.play()
+
+func stopLevelComplete():
+	$LevelComplete.stop()
+	

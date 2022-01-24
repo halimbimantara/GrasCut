@@ -1,15 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/audio/impactPunch_medium_002.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/audio/footstep_grass_000.ogg" type="AudioStream" id=2]
 [ext_resource path="res://src/item/Audio.gd" type="Script" id=3]
 [ext_resource path="res://assets/audio/island_0.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/FSXNVYR-surprise-cash-bonus.mp3" type="AudioStream" id=5]
 
 [node name="Audio" type="Spatial"]
 script = ExtResource( 3 )
 
 [node name="BgMusic" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 4 )
+unit_db = 30.0
+
+[node name="LevelComplete" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 5 )
 unit_db = 30.0
 
 [node name="GrassCut" type="AudioStreamPlayer3D" parent="."]

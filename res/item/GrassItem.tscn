@@ -147,11 +147,12 @@ curve = SubResource( 24 )
 script = ExtResource( 1 )
 global_seed = 1
 preview_count = 1
-modifier_stack = Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/core/modifier_stack.gd" ),"stack":[ Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/modifiers/distribute_inside_random.gd" ),"enabled":true,"display_name":"Distribute Inside (Random)","category":"Distribute","warning":"","warning_ignore_no_transforms":true,"warning_ignore_no_path":false,"override_global_seed":true,"custom_seed":0,"instance_count":20,"_rng":Object(RandomNumberGenerator,"seed":3182010516340541717,"state":534502041765021264,"script":null)
+modifier_stack = Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/core/modifier_stack.gd" ),"stack":[ Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/modifiers/distribute_inside_random.gd" ),"enabled":true,"display_name":"Distribute Inside (Random)","category":"Distribute","warning":"","warning_ignore_no_transforms":true,"warning_ignore_no_path":false,"override_global_seed":true,"custom_seed":0,"instance_count":20,"_rng":Object(RandomNumberGenerator,"seed":5872121294630703541,"state":2636254984271243888,"script":null)
 )
 , Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/modifiers/randomize_transforms.gd" ),"enabled":true,"display_name":"Randomize Transforms","category":"Edit","warning":"","warning_ignore_no_transforms":false,"warning_ignore_no_path":true,"override_global_seed":false,"custom_seed":5,"local_space":true,"position":Vector3( 0.3, 0, 0.2 ),"rotation":Vector3( 0, 300, 0 ),"scale":Vector3( 1, 1, 1 ),"_rng":Object(RandomNumberGenerator,"seed":-6915808713028927208,"state":5253039476560501719,"script":null)
 )
- ],"just_created":false,"undo_redo":null)
+ ],"just_created":false,"undo_redo":Object(UndoRedo,"script":null)
+)
 
 
 [node name="ScatterItem" type="Spatial" parent="GrassScatter"]
@@ -169,6 +170,8 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
+
+[node name="SpotLight" type="SpotLight" parent="GrassScatter/ScatterItem"]
 
 [node name="Flowers" type="Spatial" parent="GrassScatter"]
 visible = false

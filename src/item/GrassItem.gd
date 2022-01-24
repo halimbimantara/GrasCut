@@ -43,7 +43,7 @@ func _on_GrassItem_body_entered(body):
 
 func _onPopFlower(caller):
 	tweenNode.interpolate_property(
-		$GrassScatter/Flower, "visible", false, true, 0.1, Tween.TRANS_LINEAR, Tween.EASE_OUT
+		$GrassScatter/Flower, "visible", false, true, 0.1, Tween.TRANS_BOUNCE, Tween.EASE_OUT
 	)
 	tweenNode.start()
 	tweenNode.interpolate_property(

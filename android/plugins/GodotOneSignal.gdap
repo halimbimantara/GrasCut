@@ -1,0 +1,9 @@
+[config]
+
+name="GodotOneSignal"
+binary_type="local"
+binary="GodotOneSignal.1.0.1.aar"
+
+[dependencies]
+
+remote=["com.onesignal:OneSignal:[4.0.0, 4.99.99]"]

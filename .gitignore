@@ -1,2 +1,3 @@
 *~
-android/*
+android/build/build/*
+android/build/.gradle/*
