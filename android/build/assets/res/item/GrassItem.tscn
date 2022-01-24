@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://addons/scatter/src/core/scatter.gd" type="Script" id=1]
 [ext_resource path="res://addons/scatter/src/core/scatter_item.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/audio/footstep_grass_000.ogg" type="AudioStream" id=7]
 [ext_resource path="res://assets/audio/impactPunch_medium_002.ogg" type="AudioStream" id=8]
 [ext_resource path="res://assets/Particles/transparant/magic_05.png" type="Texture" id=9]
+[ext_resource path="res://res/item/FlowerRed.tscn" type="PackedScene" id=10]
 
 [sub_resource type="BoxShape" id=6]
 extents = Vector3( 0.796171, 1, 0.831703 )
@@ -146,12 +147,11 @@ curve = SubResource( 24 )
 script = ExtResource( 1 )
 global_seed = 1
 preview_count = 1
-modifier_stack = Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/core/modifier_stack.gd" ),"stack":[ Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/modifiers/distribute_inside_random.gd" ),"enabled":true,"display_name":"Distribute Inside (Random)","category":"Distribute","warning":"","warning_ignore_no_transforms":true,"warning_ignore_no_path":false,"override_global_seed":true,"custom_seed":0,"instance_count":20,"_rng":Object(RandomNumberGenerator,"seed":3576043008314583589,"state":7790856509020423712,"script":null)
+modifier_stack = Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/core/modifier_stack.gd" ),"stack":[ Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/modifiers/distribute_inside_random.gd" ),"enabled":true,"display_name":"Distribute Inside (Random)","category":"Distribute","warning":"","warning_ignore_no_transforms":true,"warning_ignore_no_path":false,"override_global_seed":true,"custom_seed":0,"instance_count":20,"_rng":Object(RandomNumberGenerator,"seed":-2721129964942185005,"state":-8101157105717166666,"script":null)
 )
 , Object(Node,"_import_path":NodePath(""),"pause_mode":0,"process_priority":0,"script":Resource( "res://addons/scatter/src/modifiers/randomize_transforms.gd" ),"enabled":true,"display_name":"Randomize Transforms","category":"Edit","warning":"","warning_ignore_no_transforms":false,"warning_ignore_no_path":true,"override_global_seed":false,"custom_seed":5,"local_space":true,"position":Vector3( 0.3, 0, 0.2 ),"rotation":Vector3( 0, 300, 0 ),"scale":Vector3( 1, 1, 1 ),"_rng":Object(RandomNumberGenerator,"seed":-6915808713028927208,"state":5253039476560501719,"script":null)
 )
- ],"just_created":false,"undo_redo":Object(UndoRedo,"script":null)
-)
+ ],"just_created":false,"undo_redo":null)
 
 
 [node name="ScatterItem" type="Spatial" parent="GrassScatter"]
@@ -170,7 +170,9 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Flower" type="Spatial" parent="GrassScatter"]
+[node name="SpotLight" type="SpotLight" parent="GrassScatter/ScatterItem"]
+
+[node name="Flowers" type="Spatial" parent="GrassScatter"]
 visible = false
 script = ExtResource( 2 )
 proportion = 70
@@ -180,13 +182,17 @@ materials = [ null ]
 merge_target_meshes = true
 cast_shadow = 0
 
-[node name="MultiMeshInstance" type="MultiMeshInstance" parent="GrassScatter/Flower"]
+[node name="MultiMeshInstance" type="MultiMeshInstance" parent="GrassScatter/Flowers"]
 cast_shadow = 0
 multimesh = SubResource( 28 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
+
+[node name="Flower" parent="GrassScatter" instance=ExtResource( 10 )]
+transform = Transform( 0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -3.39812, 0, -12.0942 )
+visible = false
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.4
