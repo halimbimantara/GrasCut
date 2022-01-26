@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/t_noise.png-e10f8e40ee944b131064956eb50e2fe9.s3tc.stex"
 path.etc2="res://.import/t_noise.png-e10f8e40ee944b131064956eb50e2fe9.etc2.stex"
+path.etc="res://.import/t_noise.png-e10f8e40ee944b131064956eb50e2fe9.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/scatter/demos/assets/grass/data/t_noise.png"
-dest_files=[ "res://.import/t_noise.png-e10f8e40ee944b131064956eb50e2fe9.s3tc.stex", "res://.import/t_noise.png-e10f8e40ee944b131064956eb50e2fe9.etc2.stex" ]
+dest_files=[ "res://.import/t_noise.png-e10f8e40ee944b131064956eb50e2fe9.s3tc.stex", "res://.import/t_noise.png-e10f8e40ee944b131064956eb50e2fe9.etc2.stex", "res://.import/t_noise.png-e10f8e40ee944b131064956eb50e2fe9.etc.stex" ]
 
 [params]
 

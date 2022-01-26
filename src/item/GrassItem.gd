@@ -8,32 +8,33 @@ signal showflower
 onready var grassEmit = $Particle
 onready var flowerEmit = $particle_congrate
 onready var tweenNode = $Tween
-onready var tweenNode2 = $Tween2
 onready var sounCut = $Audio/AudioStreamPlayer3D
 onready var soundFlower = $Audio/FlowerPop
 var isHideGrass = false
+var grassCuted = false
 
 #func _ready():
 ##	tweenNode.interpolate_property($GrassScatter/Flower,"visible",false,true,1.5,Tween.TRANS_LINEAR,Tween.EASE_OUT)
 ##	tweenNode.start()
-#	tweenNode.interpolate_property($GrassScatter,"proportion",2,50,2,Tween.TRANS_LINEAR,Tween.EASE_OUT)
+#	tweenNode.interpolate_property($GrassScatter/Flower,"scale",Vector3(0.02,0.02,0.02),Vector3(0.09,0.09,0.09),1,Tween.TRANS_ELASTIC,Tween.EASE_OUT)
 #	tweenNode.start()
+#	pass
 
 
 func _on_Timer_timeout():
 	grassEmit.emitting = false
-	sounCut.stop()
+	Audio.stopGrassCut()
 
 
 func _on_GrassItem_body_entered(body):
 	if body.name == "Player":
 		if not isHideGrass:
 			grassEmit.emitting = true
-			sounCut.play()
+			GamePlay.grassPoint += 1
+			Audio.playGrassCut()
 
 		$GrassScatter/ScatterItem.visible = false
 		isHideGrass = true
-		GamePlay.grassPoint += 1
 		if GamePlay.grassPoint == GamePlay.totalGrassLevel:
 			GamePlay.player.queue_free()
 			emit_signal("showflower")
@@ -46,14 +47,16 @@ func _onPopFlower(caller):
 		$GrassScatter/Flower, "visible", false, true, 0.1, Tween.TRANS_BOUNCE, Tween.EASE_OUT
 	)
 	tweenNode.start()
-	tweenNode.interpolate_property(
-		$GrassScatter/Flower, "proportion", 10, 45, 1, Tween.TRANS_LINEAR, Tween.EASE_OUT
-	)
+#	tweenNode.interpolate_property(
+#		$GrassScatter/Flower, "proportion", 10, 45, 1, Tween.TRANS_LINEAR, Tween.EASE_OUT
+#	)
+	tweenNode.interpolate_property($GrassScatter/Flower,"scale",Vector3(0.02,0.02,0.02),Vector3(0.09,0.09,0.09),1,Tween.TRANS_ELASTIC,Tween.EASE_OUT)
 	tweenNode.start()
+	
 	flowerEmit.emitting = true
-	soundFlower.play()
-	yield(get_tree().create_timer(0.2), "timeout")
-	soundFlower.stop()
+	Audio.playFlowerPop()
+	yield(get_tree().create_timer(0.5), "timeout")
+	Audio.stopFlowerPop()
 	flowerEmit.emitting = false
 
 

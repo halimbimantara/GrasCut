@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/sprite_0084.png-f798dcdc372de908163128ccd1bc1186.s3tc.stex"
 path.etc2="res://.import/sprite_0084.png-f798dcdc372de908163128ccd1bc1186.etc2.stex"
+path.etc="res://.import/sprite_0084.png-f798dcdc372de908163128ccd1bc1186.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/scatter/demos/assets/leaves/data/sprite_0084.png"
-dest_files=[ "res://.import/sprite_0084.png-f798dcdc372de908163128ccd1bc1186.s3tc.stex", "res://.import/sprite_0084.png-f798dcdc372de908163128ccd1bc1186.etc2.stex" ]
+dest_files=[ "res://.import/sprite_0084.png-f798dcdc372de908163128ccd1bc1186.s3tc.stex", "res://.import/sprite_0084.png-f798dcdc372de908163128ccd1bc1186.etc2.stex", "res://.import/sprite_0084.png-f798dcdc372de908163128ccd1bc1186.etc.stex" ]
 
 [params]
 

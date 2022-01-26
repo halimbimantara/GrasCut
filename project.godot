@@ -45,6 +45,11 @@ _global_script_classes=[ {
 "path": "res://SwipeModule/ThrowedHeader.gd"
 }, {
 "base": "Node",
+"class": "UnityAdsAPI",
+"language": "GDScript",
+"path": "res://lib/unity-ads-plugin-api/unity_ads.gd"
+}, {
+"base": "Node",
 "class": "_SwipeEventCore",
 "language": "GDScript",
 "path": "res://SwipeModule/_SwipeEventCore.gd"
@@ -57,6 +62,7 @@ _global_script_class_icons={
 "SwipeModule": "",
 "ThrowedFooter": "res://SwipeModule/SwipeEventCore.png",
 "ThrowedHeader": "res://SwipeModule/SwipeEventCore.png",
+"UnityAdsAPI": "",
 "_SwipeEventCore": "res://SwipeModule/SwipeEventCore.png"
 }
 
@@ -68,10 +74,16 @@ config/icon="res://icon.png"
 
 [autoload]
 
-GamePlay="*res://src/core/GamePlay.gd"
+GamePlay="*res://src/core/Game.gd"
 SceneFade="*res://res/ui/SceneFade.tscn"
 Onesignal="*res://lib/onesignal-plugin-api/onesignal.gd"
 Audio="*res://res/item/Audio.tscn"
+rateme="*res://scripts/rateme.gd"
+Event="*res://src/core/Event.gd"
+
+[compression]
+
+formats/zstd/compression_level=5
 
 [display]
 
@@ -84,7 +96,7 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/NativeLib/plugin.cfg", "res://addons/scatter/plugin.cfg", "res://addons/swipe-detector/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/NativeLib/plugin.cfg", "res://addons/SingletonScriptsShortcut/plugin.cfg", "res://addons/scatter/plugin.cfg", "res://addons/swipe-detector/plugin.cfg" )
 
 [global]
 
@@ -114,6 +126,8 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/driver/fallback_to_gles2=true
 quality/intended_usage/framebuffer_allocation.mobile=2
-quality/subsurface_scattering/quality=2
+vram_compression/import_etc=true
+quality/shadows/filter_mode.mobile=2
 environment/default_environment="res://default_env.tres"

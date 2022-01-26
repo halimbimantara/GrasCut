@@ -21,6 +21,9 @@ surfaces/0 = {
 
 [node name="F_foliageplant_08_LOD1_01" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.0336959, -0.999432, 0, 0.999432, 0.0336959, 0, -9.83655, 0 )
+use_in_baked_light = true
+generate_lightmap = false
+lightmap_scale = 1
 mesh = SubResource( 1 )
 material/0 = null
 

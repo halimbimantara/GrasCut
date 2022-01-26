@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/HUD/RepeatPNG.png" type="Texture" id=1]
 [ext_resource path="res://assets/Fonts/Yeyey-1pK2.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://res/ui/HUD.gd" type="Script" id=3]
+[ext_resource path="res://assets/Gui/Button/ArrowLeftPNG.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -13,7 +14,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_horizontal_guides_": [ 21.0 ],
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ 33.0 ]
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -43,6 +46,12 @@ clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="BtnHome" type="TouchScreenButton" parent="HBoxContainer/Control"]
+position = Vector2( 28, 19 )
+scale = Vector2( 0.134, 0.172222 )
+normal = ExtResource( 4 )
+action = "ui_home"
 
 [node name="Center" type="Control" parent="HBoxContainer"]
 margin_left = 241.0

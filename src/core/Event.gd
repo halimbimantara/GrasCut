@@ -15,4 +15,5 @@ signal update_time(value)
 # warning-ignore:unused_signal
 signal level_passed()
 signal open_door()
+signal back_home()
 signal update_ui(value)

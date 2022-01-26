@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/particle_green.png-34f5ab3d21563a95967136b87849bfb1.s3tc.stex"
 path.etc2="res://.import/particle_green.png-34f5ab3d21563a95967136b87849bfb1.etc2.stex"
+path.etc="res://.import/particle_green.png-34f5ab3d21563a95967136b87849bfb1.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Particles/particle_green.png"
-dest_files=[ "res://.import/particle_green.png-34f5ab3d21563a95967136b87849bfb1.s3tc.stex", "res://.import/particle_green.png-34f5ab3d21563a95967136b87849bfb1.etc2.stex" ]
+dest_files=[ "res://.import/particle_green.png-34f5ab3d21563a95967136b87849bfb1.s3tc.stex", "res://.import/particle_green.png-34f5ab3d21563a95967136b87849bfb1.etc2.stex", "res://.import/particle_green.png-34f5ab3d21563a95967136b87849bfb1.etc.stex" ]
 
 [params]
 

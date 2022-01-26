@@ -1,7 +1,8 @@
 {
     "platforms": [
         "all", 
-        "android"
+        "android", 
+        "tvos"
     ], 
     "packages": {
         "multidex": {
@@ -9,6 +10,17 @@
                 "android"
             ], 
             "version": "2.0.1", 
+            "dependencies": []
+        }, 
+        "rateme": {
+            "platforms": [
+                "all", 
+                "android"
+            ], 
+            "version": "0.2.0", 
+            "autoload": {
+                "rateme": "*res://scripts/rateme.gd"
+            }, 
             "dependencies": []
         }
     }, 

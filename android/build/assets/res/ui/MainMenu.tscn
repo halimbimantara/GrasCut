@@ -1,0 +1,262 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://assets/Gui/bg.png" type="Texture" id=1]
+[ext_resource path="res://assets/Gui/Button/PlayButton.png" type="Texture" id=2]
+[ext_resource path="res://assets/Gui/Button/Shadow.png" type="Texture" id=3]
+[ext_resource path="res://src/UI/MainMenu.gd" type="Script" id=4]
+[ext_resource path="res://assets/Gui/Button/Red.png" type="Texture" id=5]
+[ext_resource path="res://res/ui/DefaultFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://assets/Gui/Button/Orange.png" type="Texture" id=7]
+[ext_resource path="res://assets/Gui/Button/InfoPNG.png" type="Texture" id=8]
+[ext_resource path="res://assets/Gui/Button/ExitPNG.png" type="Texture" id=9]
+[ext_resource path="res://assets/Gui/Button/StarPNG.png" type="Texture" id=10]
+[ext_resource path="res://assets/audio/bg_music.mp3" type="AudioStream" id=11]
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://assets/Fonts/Yeyey-1pK2.otf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+outline_size = 4
+outline_color = Color( 0.996078, 0.458824, 0.329412, 1 )
+font_data = SubResource( 2 )
+
+[sub_resource type="Animation" id=1]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/path = NodePath("MainMenu/VBoxContainer/Control2/BtnPrivacy:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -165, 282 ), Vector2( 110, 291 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MainMenu/VBoxContainer/Control2/BtnShadow2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MainMenu/VBoxContainer/Control2/BtnRateme:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 1.001 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 733, 282 ), Vector2( 461, 296 ), Vector2( 453, 294 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MainMenu/VBoxContainer/Control2/BtnShadow3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MainMenu/VBoxContainer/Control2/BtnShadow2:rect_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 206, 199 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("MainMenu/VBoxContainer/Control2/BtnShadow2:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = false
+tracks/5/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 85, 269 ) ]
+}
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 715.0 ],
+"_edit_vertical_guides_": [ 103.0, 266.0, 446.0 ]
+}
+
+[node name="MainMenu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="MainMenu/VBoxContainer"]
+margin_right = 720.0
+margin_bottom = 424.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainMenu/VBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -269.0
+margin_top = -45.5
+margin_right = 269.0
+margin_bottom = 45.5
+custom_colors/font_color = Color( 0.960784, 0.937255, 0.937255, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "Grass Cut"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnExit" type="TouchScreenButton" parent="MainMenu/VBoxContainer/Control"]
+position = Vector2( 595, 24.0001 )
+scale = Vector2( 0.2125, 0.216667 )
+normal = ExtResource( 5 )
+
+[node name="ExitPng" type="Sprite" parent="MainMenu/VBoxContainer/Control/BtnExit"]
+position = Vector2( 244.706, 253.846 )
+scale = Vector2( 0.87647, 0.869231 )
+texture = ExtResource( 9 )
+
+[node name="Control2" type="Control" parent="MainMenu/VBoxContainer"]
+margin_top = 428.0
+margin_right = 720.0
+margin_bottom = 852.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BtnShadow" type="TextureRect" parent="MainMenu/VBoxContainer/Control2"]
+margin_left = 191.0
+margin_top = -36.0
+margin_right = 520.0
+margin_bottom = 293.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnPlay" type="TouchScreenButton" parent="MainMenu/VBoxContainer/Control2/BtnShadow"]
+position = Vector2( 34, 41 )
+scale = Vector2( 0.341558, 0.345833 )
+normal = ExtResource( 2 )
+
+[node name="BtnShadow2" type="TextureRect" parent="MainMenu/VBoxContainer/Control2"]
+margin_left = 85.0
+margin_top = 269.0
+margin_right = 291.0
+margin_bottom = 468.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnShadow3" type="TextureRect" parent="MainMenu/VBoxContainer/Control2"]
+margin_left = 429.0
+margin_top = 275.0
+margin_right = 635.0
+margin_bottom = 474.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnPrivacy" type="TouchScreenButton" parent="MainMenu/VBoxContainer/Control2"]
+position = Vector2( 110, 291 )
+scale = Vector2( 0.224, 0.224 )
+normal = ExtResource( 7 )
+
+[node name="BtnPrivacy" type="Sprite" parent="MainMenu/VBoxContainer/Control2/BtnPrivacy"]
+position = Vector2( 361.607, 357.143 )
+scale = Vector2( 1.47237, 1.14083 )
+texture = ExtResource( 8 )
+
+[node name="BtnRateme" type="TouchScreenButton" parent="MainMenu/VBoxContainer/Control2"]
+position = Vector2( 453, 294 )
+scale = Vector2( 0.224, 0.224 )
+normal = ExtResource( 7 )
+
+[node name="ExitPng" type="Sprite" parent="MainMenu/VBoxContainer/Control2/BtnRateme"]
+position = Vector2( 352.678, 370.536 )
+texture = ExtResource( 10 )
+
+[node name="Control3" type="Control" parent="MainMenu/VBoxContainer"]
+margin_top = 856.0
+margin_right = 720.0
+margin_bottom = 1280.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainMenu/VBoxContainer/Control3"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 72.0
+margin_bottom = 153.0
+custom_fonts/font = SubResource( 3 )
+text = "Copyright 2022"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="MainMenu"]
+repeat = true
+playback/repeat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/start = SubResource( 1 )
+
+[node name="Screen" type="Spatial" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[connection signal="pressed" from="MainMenu/VBoxContainer/Control2/BtnShadow/BtnPlay" to="." method="_on_BtnPlay_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Control2/BtnPrivacy" to="." method="_on_BtnPrivacy_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Control2/BtnRateme" to="." method="_on_BtnRateme_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

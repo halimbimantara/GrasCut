@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/slash_01.png-0efa94df5cea9a6bfdd2434638909228.s3tc.stex"
 path.etc2="res://.import/slash_01.png-0efa94df5cea9a6bfdd2434638909228.etc2.stex"
+path.etc="res://.import/slash_01.png-0efa94df5cea9a6bfdd2434638909228.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Particles/transparant/slash_01.png"
-dest_files=[ "res://.import/slash_01.png-0efa94df5cea9a6bfdd2434638909228.s3tc.stex", "res://.import/slash_01.png-0efa94df5cea9a6bfdd2434638909228.etc2.stex" ]
+dest_files=[ "res://.import/slash_01.png-0efa94df5cea9a6bfdd2434638909228.s3tc.stex", "res://.import/slash_01.png-0efa94df5cea9a6bfdd2434638909228.etc2.stex", "res://.import/slash_01.png-0efa94df5cea9a6bfdd2434638909228.etc.stex" ]
 
 [params]
 

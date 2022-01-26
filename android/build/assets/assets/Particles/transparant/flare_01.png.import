@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/flare_01.png-a53a1828e5f601eb9bc9d839bc0f0701.s3tc.stex"
 path.etc2="res://.import/flare_01.png-a53a1828e5f601eb9bc9d839bc0f0701.etc2.stex"
+path.etc="res://.import/flare_01.png-a53a1828e5f601eb9bc9d839bc0f0701.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Particles/transparant/flare_01.png"
-dest_files=[ "res://.import/flare_01.png-a53a1828e5f601eb9bc9d839bc0f0701.s3tc.stex", "res://.import/flare_01.png-a53a1828e5f601eb9bc9d839bc0f0701.etc2.stex" ]
+dest_files=[ "res://.import/flare_01.png-a53a1828e5f601eb9bc9d839bc0f0701.s3tc.stex", "res://.import/flare_01.png-a53a1828e5f601eb9bc9d839bc0f0701.etc2.stex", "res://.import/flare_01.png-a53a1828e5f601eb9bc9d839bc0f0701.etc.stex" ]
 
 [params]
 
