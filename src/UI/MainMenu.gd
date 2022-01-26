@@ -16,8 +16,8 @@ func _ready():
 	tweens.interpolate_property(btnShadow,"rect_size:x",329,350,2.0,Tween.TRANS_ELASTIC,Tween.EASE_OUT)
 	tweens.interpolate_property(btnShadow,"rect_size:y",329,350,2.0,Tween.TRANS_ELASTIC,Tween.EASE_OUT)
 	
-	tweens.interpolate_property(btnShadow,"rect_position:x",191,181,1.0,Tween.TRANS_ELASTIC,Tween.EASE_OUT)
-	tweens.interpolate_property(btnShadow,"rect_position:y",-36,-50,1.0,Tween.TRANS_ELASTIC,Tween.EASE_OUT)
+#	tweens.interpolate_property(btnShadow,"rect_position",Vector2(34,37),Vector2(40,43),1.0,Tween.TRANS_ELASTIC,Tween.EASE_OUT)
+#	tweens.interpolate_property(btnShadow,"rect_position:y",37,-50,1.0,Tween.TRANS_ELASTIC,Tween.EASE_OUT)
 	
 	tweens.interpolate_property(btnShadowPrivacy,"rect_size:x",206,215,1.0,Tween.TRANS_SINE,Tween.EASE_OUT)
 	tweens.interpolate_property(btnShadowPrivacy,"rect_size:y",206,215,1.0,Tween.TRANS_SINE,Tween.EASE_OUT)
@@ -37,8 +37,9 @@ func _on_BtnPlay_pressed():
 	yield(get_tree().create_timer(0.2), "timeout")
 	Audio.clickStopButton()
 	#cek last level
-	$MainMenu.visible = false
+	$MainMenu/VBoxContainer.visible = false
 #	GamePlay.fader.fade_out()
+	yield(get_tree().create_timer(2), "timeout")
 	get_tree().change_scene("res://res/level/Level_1.tscn")
 
 
@@ -53,3 +54,7 @@ func _on_BtnRateme_pressed():
 
 func _on_BtnPrivacy_pressed():
 	OS.shell_open("https://google.com")
+
+
+func _on_BtnExit_pressed():
+	get_tree().quit()

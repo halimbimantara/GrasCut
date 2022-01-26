@@ -47,14 +47,15 @@ script = ExtResource( 6 )
 environment = SubResource( 8 )
 
 [node name="Light" type="Spatial" parent="."]
+visible = false
 
 [node name="DirectionalLight" type="DirectionalLight" parent="Light"]
-transform = Transform( -0.977242, 0.0484874, -0.206514, -0.188341, -0.646261, 0.73951, -0.0976046, 0.761575, 0.640685, -4.20838, 31.7193, 30.9017 )
-visible = false
+transform = Transform( -0.977242, 0.0484877, -0.206514, -0.16993, -0.761663, 0.625294, -0.126975, 0.646156, 0.752569, -0.0773683, 31.7193, 30.9017 )
+light_energy = 1.5
+light_indirect_energy = 2.0
 
 [node name="DirectionalLight2" type="DirectionalLight" parent="Light"]
 transform = Transform( 0.700225, 0.421066, 0.576531, 0.655312, -0.0586444, -0.753078, -0.283285, 0.905132, -0.316994, -12.7298, 18.1061, -33.655 )
-visible = false
 light_energy = 1.5
 
 [node name="SwipeDetector" parent="." instance=ExtResource( 2 )]
@@ -148,7 +149,7 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.98258
 
 [node name="particle_congrate" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.0403759, 0.999185, 0, -0.999185, 0.0403759, 0, 5.24733, -2.0623 )
-visible = false
+emitting = false
 amount = 50
 preprocess = 1.0
 explosiveness = 1.0

@@ -126,8 +126,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-quality/driver/fallback_to_gles2=true
-quality/intended_usage/framebuffer_allocation.mobile=2
 vram_compression/import_etc=true
-quality/shadows/filter_mode.mobile=2
 environment/default_environment="res://default_env.tres"

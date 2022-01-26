@@ -1,7 +1,7 @@
 extends KinematicBody
 
-var speed = 80
-var acceleration = 15
+var speed = 70
+var acceleration = 20
 var air_acceleration = 5
 var gravity = 0.98
 var max_velocity = 54
@@ -30,37 +30,35 @@ func handle_movement(delta):
 		direction -= transform.basis.z * delta
 
 	if Input.is_action_pressed("ui_down"):
-		direction += transform.basis.z
+		direction += transform.basis.z * delta
 
 	if Input.is_action_pressed("ui_left"):
-		direction -= transform.basis.x
+		direction -= transform.basis.x * delta
 
 	if Input.is_action_pressed("ui_right"):
-		direction += transform.basis.x
+		direction += transform.basis.x * delta
 
 	direction = direction.normalized()
 	var accel = acceleration if is_on_floor() else air_acceleration
 	
 #	velocity = velocity.linear_interpolate(direction * speed,accel * delta)
-	
+#	velocity = direction
 	y_velocity = -0.01
 		
 	velocity.y = y_velocity
-	print(velocity)
 	velocity = move_and_slide(velocity,Vector3.UP)
-
 
 func _on_SwipeDetector_swiped(gesture):
 	var mpos = gesture.get_direction()
 	if not moved:
 		if mpos == "right":
-			velocity.x = speed
+			velocity.x = speed 
 		if mpos == "left":
-			velocity.x = - speed
+			velocity.x = - speed 
 		if mpos == "up":
-			velocity.z = -speed
+			velocity.z = -speed 
 		if mpos == "down":
-			velocity.z = speed
+			velocity.z = speed 
 
 func _on_Grass_endLevel():
 	queue_free()

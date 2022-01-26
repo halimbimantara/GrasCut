@@ -9,7 +9,7 @@ func _ready():
 func popUpFlower():
 	for i in totalGrass:
 		var flower = get_child(i) as Area
-		yield(get_tree().create_timer(0.2), "timeout")
+		yield(get_tree().create_timer(0.15), "timeout")
 		flower._onPopFlower(self)	
 	emit_signal("endLevel")
 		

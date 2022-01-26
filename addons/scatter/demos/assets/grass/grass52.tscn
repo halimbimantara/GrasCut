@@ -6,4 +6,5 @@
 [node name="grass52" instance=ExtResource( 1 )]
 
 [node name="Plane" parent="." index="0"]
+use_in_baked_light = true
 material/0 = ExtResource( 2 )

@@ -2,7 +2,6 @@ extends Area
 
 # Called when the node enters the scene tree for the first time.
 onready var mTimer = $Timer
-onready var mTimerPop = $timerPop
 signal update_point
 signal showflower
 onready var grassEmit = $Particle
@@ -29,16 +28,19 @@ func _on_Timer_timeout():
 func _on_GrassItem_body_entered(body):
 	if body.name == "Player":
 		if not isHideGrass:
+			Audio.playGrassCut()
+			yield(get_tree().create_timer(0.05), "timeout")
+			Audio.stopGrassCut()
 			grassEmit.emitting = true
 			GamePlay.grassPoint += 1
-			Audio.playGrassCut()
-
+		
 		$GrassScatter/ScatterItem.visible = false
 		isHideGrass = true
+		
 		if GamePlay.grassPoint == GamePlay.totalGrassLevel:
 			GamePlay.player.queue_free()
 			emit_signal("showflower")
-		mTimer.start(0.5)
+		mTimer.start(0.2)
 		emit_signal("update_point")
 
 
@@ -55,16 +57,13 @@ func _onPopFlower(caller):
 	
 	flowerEmit.emitting = true
 	Audio.playFlowerPop()
-	yield(get_tree().create_timer(0.5), "timeout")
+	yield(get_tree().create_timer(0.3), "timeout")
 	Audio.stopFlowerPop()
 	flowerEmit.emitting = false
-
-
-func _on_timerPop_timeout():
-	pass
 
 
 func _on_Tween_tween_all_completed():
 #	tweenNode2.interpolate_property($GrassScatter/Flower,"scale_modifier",0,5,3.0,Tween.TRANS_LINEAR,Tween.EASE_OUT)
 #	tweenNode2.start()
-	print("pomp")
+	tweenNode.stop_all()
+	pass

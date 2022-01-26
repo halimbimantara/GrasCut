@@ -95,7 +95,7 @@ material = SubResource( 12 )
 script = ExtResource( 2 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.00478208, 0.999989, 0, -0.999989, 0.00478208, 0.310879, 4.19646, 0.673413 )
+transform = Transform( 1, 0, 0, 0, 0.00478208, 0.999989, 0, -0.999989, 0.00478208, 0.310879, 4.19646, -0.348309 )
 light_energy = 2.0
 
 [node name="Hazard_Saw" type="MeshInstance" parent="."]

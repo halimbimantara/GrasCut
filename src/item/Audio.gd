@@ -7,7 +7,7 @@ func stopBGMusic():
 	$BgMusic.stop()
 	
 func playGrassCut():
-	$GrassCut.play(0.20)
+	$GrassCut.play(0.18)
 
 func stopGrassCut():
 	$GrassCut.stop()
