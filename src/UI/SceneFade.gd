@@ -15,7 +15,12 @@ func fade_out()->void:
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "fade_out":
 		animationPlayer.play("fade_in")
-		if get_tree().change_scene("res://res/level/Level_" + str(GamePlay.current_level) +".tscn") == OK:
-			assert(get_tree().change_scene("res://res/level/Level_" + str(GamePlay.current_level) +".tscn") == OK)
-		else:
-			print("Gameover")
+#		emit_signal("scene_changed")
+		Event.emit_signal("change_scene")
+#		if get_tree().change_scene("res://res/level/Level_" + str(GamePlay.current_level) +".tscn") == OK:
+##			assert(get_tree().change_scene("res://res/level/LevelTestPerform.tscn") == OK)
+#
+#			assert(get_tree().change_scene("res://res/level/Level_" + str(GamePlay.current_level) +".tscn") == OK)
+#		else:
+#			print("Gameover")
+

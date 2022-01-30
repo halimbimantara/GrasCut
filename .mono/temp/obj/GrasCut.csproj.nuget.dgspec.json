@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/GrasCut.csproj": {}
+  },
+  "projects": {
+    "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/GrasCut.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/GrasCut.csproj",
+        "projectName": "GrasCut",
+        "projectPath": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/GrasCut.csproj",
+        "packagesPath": "/Users/wlb-mac/.nuget/packages/",
+        "outputPath": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/.mono/temp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/wlb-mac/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "runtimeIdentifierGraphPath": "/Library/Frameworks/Mono.framework/Versions/6.12.0/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

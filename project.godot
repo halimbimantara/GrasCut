@@ -76,9 +76,9 @@ config/icon="res://icon.png"
 
 GamePlay="*res://src/core/Game.gd"
 SceneFade="*res://res/ui/SceneFade.tscn"
-Onesignal="*res://lib/onesignal-plugin-api/onesignal.gd"
+Onesignal="res://lib/onesignal-plugin-api/onesignal.gd"
 Audio="*res://res/item/Audio.tscn"
-rateme="*res://scripts/rateme.gd"
+rateme="res://scripts/rateme.gd"
 Event="*res://src/core/Event.gd"
 
 [compression]
@@ -87,16 +87,21 @@ formats/zstd/compression_level=5
 
 [display]
 
-window/size/width=720
+window/size/width=730
 window/size/height=1280
 window/size/test_width=360
 window/size/test_height=640
 window/handheld/orientation="portrait"
 window/stretch/mode="2d"
+window/stretch/aspect="keep_width"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/NativeLib/plugin.cfg", "res://addons/SingletonScriptsShortcut/plugin.cfg", "res://addons/scatter/plugin.cfg", "res://addons/swipe-detector/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Gdtocs/plugin.cfg", "res://addons/NativeLib/plugin.cfg", "res://addons/SingletonScriptsShortcut/plugin.cfg", "res://addons/Trail/plugin.cfg", "res://addons/scatter/plugin.cfg", "res://addons/swipe-detector/plugin.cfg" )
+
+[gd2cs]
+
+config/ask_no_python=true
 
 [global]
 
@@ -126,5 +131,8 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
+quality/driver/fallback_to_gles2=true
 vram_compression/import_etc=true
 environment/default_environment="res://default_env.tres"
+quality/subsurface_scattering/quality=0

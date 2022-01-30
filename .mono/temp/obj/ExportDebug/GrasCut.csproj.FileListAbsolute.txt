@@ -1,0 +1,8 @@
+/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/.mono/temp/bin/ExportDebug/GrasCut.dll
+/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/.mono/temp/bin/ExportDebug/GrasCut.pdb
+/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/.mono/temp/obj/ExportDebug/GrasCut.csproj.AssemblyReference.cache
+/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/.mono/temp/obj/ExportDebug/GrasCut.AssemblyInfoInputs.cache
+/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/.mono/temp/obj/ExportDebug/GrasCut.AssemblyInfo.cs
+/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/.mono/temp/obj/ExportDebug/GrasCut.csproj.CoreCompileInputs.cache
+/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/.mono/temp/obj/ExportDebug/GrasCut.dll
+/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/.mono/temp/obj/ExportDebug/GrasCut.pdb

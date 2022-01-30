@@ -1,11 +1,12 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/Item/Metal.material" type="Material" id=1]
 [ext_resource path="res://src/player/Saw.gd" type="Script" id=2]
 [ext_resource path="res://res/player/Hazard_Saw.gd" type="Script" id=3]
 [ext_resource path="res://assets/Item/Red.material" type="Material" id=4]
-[ext_resource path="res://assets/Particles/transparant/smoke_04.png" type="Texture" id=5]
+[ext_resource path="res://addons/Trail/trail_3d.gd" type="Script" id=5]
 [ext_resource path="res://assets/Particles/transparant/magic_05.png" type="Texture" id=6]
+[ext_resource path="res://assets/Particles/lighting_yellow.png" type="Texture" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Hazard_Saw_Cylinder009"
@@ -26,70 +27,46 @@ surfaces/0 = {
 radius = 0.902606
 height = 0.255647
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=3]
 flags_transparent = true
 flags_unshaded = true
 params_blend_mode = 1
 params_cull_mode = 2
-albedo_color = Color( 0.952941, 0.4, 0.0666667, 1 )
-albedo_texture = ExtResource( 5 )
+albedo_color = Color( 0.792157, 0.811765, 0.145098, 1 )
+albedo_texture = ExtResource( 6 )
 
-[sub_resource type="Curve" id=7]
-min_value = -360.0
-max_value = 360.0
-_data = [ Vector2( 0.00497512, 5.48837 ), 0.0, -158.51, 0, 0, Vector2( 0.980099, 358.943 ), 0.0, 0.0, 0, 0 ]
+[sub_resource type="QuadMesh" id=15]
+material = SubResource( 3 )
 
-[sub_resource type="CurveTexture" id=8]
-curve = SubResource( 7 )
-
-[sub_resource type="Curve" id=9]
-min_value = -200.0
-max_value = 200.0
-_data = [ Vector2( 0.0149254, 10.2632 ), 0.0, 661.299, 0, 0, Vector2( 1, 199.354 ), 306.87, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=10]
-curve = SubResource( 9 )
-
-[sub_resource type="ParticlesMaterial" id=4]
-flag_disable_z = true
-direction = Vector3( 0, 0, 0 )
-gravity = Vector3( 0, 0, 0 )
-angular_velocity = 10.0
-angular_velocity_curve = SubResource( 8 )
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-linear_accel_random = 1.0
-linear_accel_curve = SubResource( 10 )
-radial_accel = 20.0
-radial_accel_random = 1.0
-angle = 100.0
-angle_random = 1.0
-
-[sub_resource type="QuadMesh" id=5]
-
-[sub_resource type="ParticlesMaterial" id=11]
-emission_shape = 2
-emission_box_extents = Vector3( 1, 1, 1 )
-flag_align_y = true
-flag_rotate_y = true
-gravity = Vector3( 0, 0, 0 )
-angular_velocity = 360.0
-angular_velocity_random = 1.0
-radial_accel = 7.27
-damping = 1.0
-damping_random = 0.5
-angle = 10.0
-angle_random = 1.0
-
-[sub_resource type="SpatialMaterial" id=12]
+[sub_resource type="SpatialMaterial" id=19]
+flags_transparent = true
 flags_unshaded = true
 params_blend_mode = 1
 params_cull_mode = 2
-albedo_color = Color( 0.811765, 0.145098, 0.270588, 1 )
-albedo_texture = ExtResource( 6 )
+albedo_texture = ExtResource( 7 )
 
-[sub_resource type="QuadMesh" id=13]
-material = SubResource( 12 )
+[sub_resource type="Shader" id=17]
+code = "shader_type spatial;
+
+uniform float emission_strength = 1.0;
+
+void fragment(){
+	
+	ALBEDO = vec3(0.0);
+	EMISSION = COLOR.rgb*emission_strength;
+	ALPHA = COLOR.a;
+}"
+
+[sub_resource type="ShaderMaterial" id=18]
+next_pass = SubResource( 19 )
+shader = SubResource( 17 )
+shader_param/emission_strength = 2.0
+
+[sub_resource type="Curve" id=20]
+_data = [ Vector2( 0, 0.99932 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -2.42151, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=16]
+colors = PoolColorArray( 0.305882, 0.858824, 0.521569, 1, 0, 0, 0, 0 )
 
 [node name="Saw" type="KinematicBody"]
 script = ExtResource( 2 )
@@ -101,24 +78,39 @@ light_energy = 2.0
 [node name="Hazard_Saw" type="MeshInstance" parent="."]
 transform = Transform( 0.65, 0, 0, 0, -2.84124e-08, -0.65, 0, 0.65, -2.84124e-08, 0, 0, 0 )
 mesh = SubResource( 1 )
+software_skinning_transform_normals = false
 material/0 = ExtResource( 4 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 2 )
 
-[node name="Particles" type="Particles" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.00467747, 0.999989, 0, -0.999989, 0.00467747, 0, 0.0217285, 0 )
-visible = false
-material_override = SubResource( 6 )
-amount = 15
-lifetime = 0.5
-visibility_aabb = AABB( -2.16296, -2.03092, -2.22919, 4.32591, 4.06184, 4.45838 )
-process_material = SubResource( 4 )
-draw_pass_1 = SubResource( 5 )
+[node name="Particles4" type="CPUParticles" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.00726054, 0.999974, 0, -0.999974, -0.00726054, 0, 0.441622, 0 )
+amount = 6
+mesh = SubResource( 15 )
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 0 )
+flag_align_y = true
+flag_rotate_y = true
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( 0, 1, 0 )
+initial_velocity_random = 0.3
+angular_velocity = 360.0
+angular_velocity_random = 1.0
+radial_accel = 8.0
+tangential_accel = 2.0
+tangential_accel_random = 1.0
+damping = 1.0
+angle = 10.0
 
-[node name="Particles2" type="Particles" parent="."]
-transform = Transform( 1, 0, 0, 0, -0.00726054, 0.999974, 0, -0.999974, -0.00726054, 0, 0, 0 )
-amount = 35
-process_material = SubResource( 11 )
-draw_pass_1 = SubResource( 13 )
+[node name="Trail3D" type="ImmediateGeometry" parent="."]
+material_override = SubResource( 18 )
+script = ExtResource( 5 )
+segments = 5
+lifetime = 0.8
+base_width = 1.2
+width_profile = SubResource( 20 )
+color_gradient = SubResource( 16 )
+smoothing_iterations = 2
+alignment = "Normal"

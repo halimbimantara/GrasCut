@@ -1,7 +1,7 @@
 extends KinematicBody
 
-var speed = 70
-var acceleration = 20
+var speed = 80
+var acceleration = 15
 var air_acceleration = 5
 var gravity = 0.98
 var max_velocity = 54
@@ -17,11 +17,12 @@ var y_velocity : float
 
 func _ready():
 	GamePlay.player = self
-#func _process(delta):
-#	handle_movement(delta)
-
-func _physics_process(delta):
+	
+func _process(delta):
 	handle_movement(delta)
+
+#func _physics_process(delta):
+#	handle_movement(delta)
 
 func handle_movement(delta):
 	var direction = Vector3()

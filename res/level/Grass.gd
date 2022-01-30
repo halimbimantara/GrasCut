@@ -11,7 +11,8 @@ func popUpFlower():
 		var flower = get_child(i) as Area
 		yield(get_tree().create_timer(0.15), "timeout")
 		flower._onPopFlower(self)	
-	emit_signal("endLevel")
+#	emit_signal("endLevel")
+	Event.emit_signal("level_passed")
 		
 
 func _on_GrassItem_showflower():

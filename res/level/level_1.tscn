@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://res/player/Saw.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/swipe-detector/swipe_detector.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://res/ui/HUD.tscn" type="PackedScene" id=5]
 [ext_resource path="res://res/level/Level13D.gd" type="Script" id=6]
 [ext_resource path="res://res/level/Grass.gd" type="Script" id=7]
-[ext_resource path="res://assets/Particles/transparant/muzzle_03.png" type="Texture" id=8]
 [ext_resource path="res://lib/admob-lib/admob.gd" type="Script" id=9]
 
 [sub_resource type="ProceduralSky" id=7]
@@ -22,23 +21,17 @@ flags_transparent = true
 flags_unshaded = true
 albedo_color = Color( 0.65098, 0.866667, 0.933333, 1 )
 
-[sub_resource type="ParticlesMaterial" id=2]
-emission_shape = 2
-emission_box_extents = Vector3( 1, 1, 1 )
-direction = Vector3( 0, 360, 0 )
-gravity = Vector3( 0, 0, 0 )
-radial_accel = 32.78
-
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=11]
 flags_transparent = true
 flags_unshaded = true
+vertex_color_use_as_albedo = true
 params_blend_mode = 1
 params_cull_mode = 2
-albedo_color = Color( 0.835294, 0.156863, 0.909804, 1 )
-albedo_texture = ExtResource( 8 )
+albedo_color = Color( 0.996078, 0.223529, 0.223529, 1 )
 
-[sub_resource type="QuadMesh" id=4]
-material = SubResource( 5 )
+[sub_resource type="QuadMesh" id=10]
+material = SubResource( 11 )
+flip_faces = true
 
 [node name="Level1" type="Spatial"]
 script = ExtResource( 6 )
@@ -47,16 +40,16 @@ script = ExtResource( 6 )
 environment = SubResource( 8 )
 
 [node name="Light" type="Spatial" parent="."]
-visible = false
 
 [node name="DirectionalLight" type="DirectionalLight" parent="Light"]
 transform = Transform( -0.977242, 0.0484877, -0.206514, -0.16993, -0.761663, 0.625294, -0.126975, 0.646156, 0.752569, -0.0773683, 31.7193, 30.9017 )
-light_energy = 1.5
-light_indirect_energy = 2.0
 
 [node name="DirectionalLight2" type="DirectionalLight" parent="Light"]
 transform = Transform( 0.700225, 0.421066, 0.576531, 0.655312, -0.0586444, -0.753078, -0.283285, 0.905132, -0.316994, -12.7298, 18.1061, -33.655 )
+visible = false
 light_energy = 1.5
+
+[node name="LevelScene" type="Spatial" parent="."]
 
 [node name="SwipeDetector" parent="." instance=ExtResource( 2 )]
 
@@ -82,6 +75,7 @@ __meta__ = {
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 30, 0 )
+current = true
 
 [node name="Grass" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.229901, 0 )
@@ -147,15 +141,27 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.38555, 0, 4.71077 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.98258, 1.23563, 4.98903 )
 
-[node name="particle_congrate" type="Particles" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.0403759, 0.999185, 0, -0.999185, 0.0403759, 0, 5.24733, -2.0623 )
+[node name="particle_congrate" type="CPUParticles" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.173579, -0.98482, 0, 0.98482, 0.173579, 0, 5.30585, -4.16072 )
 emitting = false
-amount = 50
+amount = 60
 preprocess = 1.0
 explosiveness = 1.0
 randomness = 1.0
-process_material = SubResource( 2 )
-draw_pass_1 = SubResource( 4 )
+mesh = SubResource( 10 )
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 0 )
+flag_align_y = true
+flag_rotate_y = true
+direction = Vector3( 0, 360, 0 )
+gravity = Vector3( 1, 0, 0 )
+initial_velocity = 1.0
+angular_velocity = 5.0
+linear_accel = 10.0
+radial_accel = 5.0
+tangential_accel = 2.0
+color = Color( 0.905882, 0.137255, 0.137255, 1 )
+hue_variation = 1.0
 
 [node name="HUD" parent="." instance=ExtResource( 5 )]
 

@@ -22,15 +22,13 @@ var grassCuted = false
 
 func _on_Timer_timeout():
 	grassEmit.emitting = false
-	Audio.stopGrassCut()
+	sounCut.stop()
 
 
 func _on_GrassItem_body_entered(body):
 	if body.name == "Player":
 		if not isHideGrass:
-			Audio.playGrassCut()
-			yield(get_tree().create_timer(0.05), "timeout")
-			Audio.stopGrassCut()
+			sounCut.play()
 			grassEmit.emitting = true
 			GamePlay.grassPoint += 1
 		

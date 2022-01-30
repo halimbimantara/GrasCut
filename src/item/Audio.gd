@@ -3,11 +3,14 @@ extends Node
 func playBGMusic():
 	$BgMusic.play()
 
+func volumeBGMusic(value):
+	$BgMusic.unit_db = value
+
 func stopBGMusic():
 	$BgMusic.stop()
 	
 func playGrassCut():
-	$GrassCut.play(0.18)
+	$GrassCut.play()
 
 func stopGrassCut():
 	$GrassCut.stop()
