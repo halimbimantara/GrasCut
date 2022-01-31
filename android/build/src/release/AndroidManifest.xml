@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
     <instrumentation
         tools:node="replace"
         android:name=".GodotInstrumentation"
@@ -20,7 +22,7 @@
         android:allowBackup="true"
         android:isGame="true"
         android:hasFragileUserData="false"
-        android:requestLegacyExternalStorage="false"
+        android:requestLegacyExternalStorage="true"
         tools:replace="android:allowBackup,android:isGame,android:hasFragileUserData,android:requestLegacyExternalStorage"
         tools:ignore="GoogleAppIndexingWarning"
         android:icon="@mipmap/icon" >

@@ -1,0 +1,28 @@
+<lint-module
+    format="1"
+    dir="/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build"
+    name=":"
+    type="APP"
+    maven=":build:"
+    gradle="7.0.3"
+    buildFolder="build"
+    bootClassPath="/Users/wlb-mac/Library/Android/sdk/platforms/android-31/android.jar:/Users/wlb-mac/Library/Android/sdk/build-tools/30.0.2/core-lambda-stubs.jar"
+    javaSourceLevel="11"
+    compileTarget="android-31"
+    neverShrinking="true">
+  <lintOptions
+      disable="UnusedResources,MissingTranslation"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true">
+    <severities>
+      <severity
+        id="MissingTranslation"
+        severity="IGNORE" />
+      <severity
+        id="UnusedResources"
+        severity="IGNORE" />
+    </severities>
+  </lintOptions>
+  <variant name="release"/>
+</lint-module>

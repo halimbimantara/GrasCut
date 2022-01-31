@@ -29,7 +29,7 @@ __meta__ = {
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource( 5 )
 data = {
-"cells": PoolIntArray( 3, 0, 1, 4, 0, 1, 65531, 0, 1, 65532, 0, 1, 2, 1, 1, 3, 1, 1, 4, 1, 1, 65531, 1, 1, 65532, 1, 1, 65533, 1, 1, 0, 2, 1, 1, 2, 1, 2, 2, 1, 3, 2, 1, 4, 2, 1, 65531, 2, 1, 65532, 2, 1, 65533, 2, 1, 65534, 2, 1, 65535, 2, 1, 0, 3, 1, 1, 3, 1, 2, 3, 1, 3, 3, 1, 4, 3, 1, 65531, 3, 1, 65532, 3, 1, 65533, 3, 1, 65534, 3, 1, 65535, 3, 1, 0, 65528, 1, 1, 65528, 1, 2, 65528, 1, 3, 65528, 1, 4, 65528, 1, 65531, 65528, 1, 65532, 65528, 1, 65533, 65528, 1, 65534, 65528, 1, 65535, 65528, 1, 0, 65529, 1, 1, 65529, 1, 2, 65529, 1, 3, 65529, 1, 4, 65529, 1, 65531, 65529, 1, 65532, 65529, 1, 65533, 65529, 1, 65534, 65529, 1, 65535, 65529, 1, 2, 65530, 1, 3, 65530, 1, 4, 65530, 1, 65531, 65530, 1, 65532, 65530, 1, 65533, 65530, 1, 3, 65531, 1, 4, 65531, 1, 65531, 65531, 1, 65532, 65531, 1, 0, 65532, 1, 3, 65532, 1, 4, 65532, 1, 65531, 65532, 1, 65532, 65532, 1, 65534, 65532, 1, 65535, 65532, 1, 0, 65533, 1, 3, 65533, 1, 4, 65533, 1, 65531, 65533, 1, 65532, 65533, 1, 65534, 65533, 1, 65535, 65533, 1, 0, 65534, 1, 3, 65534, 1, 4, 65534, 1, 65531, 65534, 1, 65532, 65534, 1, 65534, 65534, 1, 65535, 65534, 1, 3, 65535, 1, 4, 65535, 1, 65531, 65535, 1, 65532, 65535, 1, 65534, 65535, 1, 65535, 65535, 1 )
+"cells": PoolIntArray( 3, 0, 1, 4, 0, 1, 65531, 0, 1, 65532, 0, 1, 2, 1, 1, 3, 1, 1, 4, 1, 1, 65531, 1, 1, 65532, 1, 1, 0, 2, 1, 1, 2, 1, 2, 2, 1, 3, 2, 1, 4, 2, 1, 65531, 2, 1, 65532, 2, 1, 65533, 2, 1, 65534, 2, 1, 65535, 2, 1, 0, 3, 1, 1, 3, 1, 2, 3, 1, 3, 3, 1, 4, 3, 1, 65531, 3, 1, 65532, 3, 1, 65533, 3, 1, 65534, 3, 1, 65535, 3, 1, 0, 65528, 1, 1, 65528, 1, 2, 65528, 1, 3, 65528, 1, 4, 65528, 1, 65531, 65528, 1, 65532, 65528, 1, 65533, 65528, 1, 65534, 65528, 1, 65535, 65528, 1, 0, 65529, 1, 1, 65529, 1, 2, 65529, 1, 3, 65529, 1, 4, 65529, 1, 65531, 65529, 1, 65532, 65529, 1, 65533, 65529, 1, 65534, 65529, 1, 65535, 65529, 1, 3, 65530, 1, 4, 65530, 1, 65531, 65530, 1, 65532, 65530, 1, 65533, 65530, 1, 3, 65531, 1, 4, 65531, 1, 65531, 65531, 1, 65532, 65531, 1, 0, 65532, 1, 3, 65532, 1, 4, 65532, 1, 65531, 65532, 1, 65532, 65532, 1, 65534, 65532, 1, 65535, 65532, 1, 0, 65533, 1, 3, 65533, 1, 4, 65533, 1, 65531, 65533, 1, 65532, 65533, 1, 65534, 65533, 1, 65535, 65533, 1, 0, 65534, 1, 3, 65534, 1, 4, 65534, 1, 65531, 65534, 1, 65532, 65534, 1, 65534, 65534, 1, 65535, 65534, 1, 0, 65535, 1, 3, 65535, 1, 4, 65535, 1, 65531, 65535, 1, 65532, 65535, 1, 65534, 65535, 1, 65535, 65535, 1 )
 }
 __meta__ = {
 "_editor_clip_": 0
@@ -67,10 +67,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03445, 0, -3.44593 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03445, 0, -0.559972 )
 
 [node name="GrassItem11" parent="Grass" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03445, 0, 1.4935 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03445, 0, 2.60591 )
+
+[node name="GrassItem20" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.24354, 0, 2.60591 )
 
 [node name="GrassItem3" parent="Grass" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5925, 0, -10.9383 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.45769, 0, -10.9383 )
 
 [node name="GrassItem12" parent="Grass" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.86999, 0, -8.82934 )
@@ -103,22 +106,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.06606, 0, -7.17085 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.06606, 0, -9.03372 )
 
 [node name="GrassItem19" parent="Grass" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.302787, 0, 1.15335 )
-
-[node name="GrassItem20" parent="Grass" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.399971, 0, 3.09703 )
-
-[node name="GrassItem21" parent="Grass" instance=ExtResource( 3 )]
-transform = Transform( 0.999818, 0, -0.0190753, 0, 1, 0, 0.0190753, 0, 0.999818, 1.12885, 0, -1.27625 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.302787, 0, 0.55574 )
 
 [node name="GrassItem18" parent="Grass" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.66133, 0, 3.48973 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.88842, 0, 3.48973 )
+
+[node name="GrassItem21" parent="Grass" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.26364, 0, 3.48973 )
 
 [node name="GrassItem17" parent="Grass" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.428031, 0, -10.9383 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.02796, 1.23563, 2.94166 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.451029, 1.23563, 2.89569 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 30, 0 )
@@ -135,6 +135,7 @@ current = true
 [connection signal="showflower" from="Grass/GrassItem9" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem10" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem11" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem20" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem3" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem12" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem13" to="Grass" method="_on_GrassItem_showflower"]
@@ -147,7 +148,6 @@ current = true
 [connection signal="showflower" from="Grass/GrassItem25" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem26" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem19" to="Grass" method="_on_GrassItem_showflower"]
-[connection signal="showflower" from="Grass/GrassItem20" to="Grass" method="_on_GrassItem_showflower"]
-[connection signal="showflower" from="Grass/GrassItem21" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem18" to="Grass" method="_on_GrassItem_showflower"]
+[connection signal="showflower" from="Grass/GrassItem21" to="Grass" method="_on_GrassItem_showflower"]
 [connection signal="showflower" from="Grass/GrassItem17" to="Grass" method="_on_GrassItem_showflower"]

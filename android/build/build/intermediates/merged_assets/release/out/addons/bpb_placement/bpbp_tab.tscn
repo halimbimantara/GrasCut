@@ -1,0 +1,224 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/bpb_placement/bpbp_tab.gd" type="Script" id=1]
+
+[node name="bpbp_tab" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 245.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 245.0
+margin_bottom = 24.0
+
+[node name="chk_rapid" type="CheckBox" parent="VBoxContainer/HBoxContainer3"]
+margin_right = 135.0
+margin_bottom = 24.0
+text = "Rapid Placement"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 28.0
+margin_right = 245.0
+margin_bottom = 52.0
+
+[node name="chk_grid" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
+margin_right = 55.0
+margin_bottom = 24.0
+text = "Grid"
+
+[node name="opt_grid" type="OptionButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 59.0
+margin_right = 135.0
+margin_bottom = 24.0
+text = "Grid XZ"
+items = [ "Grid XZ", null, false, 1, null, "Grid XY", null, false, 2, null, "Grid YZ", null, false, 3, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 139.0
+margin_top = 5.0
+margin_right = 165.0
+margin_bottom = 19.0
+text = "Size"
+
+[node name="le_gridsize" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_left = 169.0
+margin_right = 227.0
+margin_bottom = 24.0
+text = "1"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HBoxContainer2" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 56.0
+margin_right = 245.0
+margin_bottom = 98.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 245.0
+margin_bottom = 14.0
+text = "Rand Rotate"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_top = 18.0
+margin_right = 245.0
+margin_bottom = 42.0
+
+[node name="chk_rot_x" type="CheckBox" parent="VBoxContainer/HBoxContainer2/HBoxContainer"]
+margin_right = 35.0
+margin_bottom = 24.0
+text = "x"
+
+[node name="chk_rot_y" type="CheckBox" parent="VBoxContainer/HBoxContainer2/HBoxContainer"]
+margin_left = 39.0
+margin_right = 74.0
+margin_bottom = 24.0
+text = "y"
+
+[node name="chk_rot_z" type="CheckBox" parent="VBoxContainer/HBoxContainer2/HBoxContainer"]
+margin_left = 78.0
+margin_right = 113.0
+margin_bottom = 24.0
+text = "z"
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/HBoxContainer"]
+margin_left = 117.0
+margin_top = 5.0
+margin_right = 121.0
+margin_bottom = 19.0
+text = " "
+
+[node name="chk_y_normal" type="CheckBox" parent="VBoxContainer/HBoxContainer2/HBoxContainer"]
+margin_left = 125.0
+margin_right = 245.0
+margin_bottom = 24.0
+text = "Y align Normal"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 102.0
+margin_right = 245.0
+margin_bottom = 200.0
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer3"]
+margin_right = 245.0
+margin_bottom = 14.0
+text = "Rand Scale"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer3"]
+margin_top = 18.0
+margin_right = 245.0
+margin_bottom = 42.0
+
+[node name="chk_scale_x" type="CheckBox" parent="VBoxContainer/VBoxContainer3/HBoxContainer"]
+margin_right = 35.0
+margin_bottom = 24.0
+text = "x"
+
+[node name="le_scale_x_min" type="LineEdit" parent="VBoxContainer/VBoxContainer3/HBoxContainer"]
+margin_left = 39.0
+margin_right = 97.0
+margin_bottom = 24.0
+text = "1"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="le_scale_x_max" type="LineEdit" parent="VBoxContainer/VBoxContainer3/HBoxContainer"]
+margin_left = 101.0
+margin_right = 159.0
+margin_bottom = 24.0
+text = "1"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer3"]
+margin_top = 46.0
+margin_right = 245.0
+margin_bottom = 70.0
+
+[node name="chk_scale_y" type="CheckBox" parent="VBoxContainer/VBoxContainer3/HBoxContainer2"]
+margin_right = 35.0
+margin_bottom = 24.0
+text = "y"
+
+[node name="le_scale_y_min" type="LineEdit" parent="VBoxContainer/VBoxContainer3/HBoxContainer2"]
+margin_left = 39.0
+margin_right = 97.0
+margin_bottom = 24.0
+text = "1"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="le_scale_y_max" type="LineEdit" parent="VBoxContainer/VBoxContainer3/HBoxContainer2"]
+margin_left = 101.0
+margin_right = 159.0
+margin_bottom = 24.0
+text = "1"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBoxContainer3"]
+margin_top = 74.0
+margin_right = 245.0
+margin_bottom = 98.0
+
+[node name="chk_scale_z" type="CheckBox" parent="VBoxContainer/VBoxContainer3/HBoxContainer3"]
+margin_right = 35.0
+margin_bottom = 24.0
+text = "z"
+
+[node name="le_scale_z_min" type="LineEdit" parent="VBoxContainer/VBoxContainer3/HBoxContainer3"]
+margin_left = 39.0
+margin_right = 97.0
+margin_bottom = 24.0
+text = "1"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="le_scale_z_max" type="LineEdit" parent="VBoxContainer/VBoxContainer3/HBoxContainer3"]
+margin_left = 101.0
+margin_right = 159.0
+margin_bottom = 24.0
+text = "1"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="btn_add" type="Button" parent="VBoxContainer"]
+margin_top = 204.0
+margin_right = 245.0
+margin_bottom = 224.0
+text = "Add"
+
+[node name="ItemList" type="ItemList" parent="."]
+margin_left = 249.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 200 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+allow_rmb_select = true
+max_columns = 12
+same_column_width = true
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+margin_right = 20.0
+margin_bottom = 20.0
+items = [ "Remove", null, 0, false, false, 0, 0, null, "", false, "Clear", null, 0, false, false, 1, 0, null, "", false ]
+
+[connection signal="button_up" from="VBoxContainer/btn_add" to="." method="_on_btn_add_button_up"]
+[connection signal="item_rmb_selected" from="ItemList" to="." method="_on_ItemList_item_rmb_selected"]
+[connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]

@@ -9,7 +9,7 @@ onready var btnPlay = $MainMenu/MarginContainer/VBoxContainer/Control2/VBoxConta
 onready var anim =$AnimationPlayer
 onready var tweens = $MainMenu/Tween
 onready var audioBg = $AudioStreamPlayer
-
+onready var mOneSignal = $OneSignal
  
 func _ready():
 	audioBg.play()
@@ -30,9 +30,18 @@ func _ready():
 #	tweens.interpolate_property(btnPlay,"position:y",16,1,1.0,Tween.TRANS_ELASTIC,Tween.EASE_OUT)
 	anim.play("start")
 	Event.connect("change_scene",self,"_on_scene_Change")
-
+	#LoadLastLevel
+	
+func checkLastLevel():
+	var last_level = mOneSignal.getLastLevel()
+	print("last level mamen",last_level)
+	GamePlay.save_level()
+	GamePlay.current_level = last_level
+	print(GamePlay.current_level)
+	
 func _on_BtnPlay_pressed():
-#	audioBg.stop()
+	checkLastLevel()
+	
 	tweens.stop_all()
 	Audio.clickPlayButton()
 	yield(get_tree().create_timer(0.2), "timeout")

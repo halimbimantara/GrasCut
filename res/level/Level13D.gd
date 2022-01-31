@@ -13,21 +13,34 @@ func _ready():
 	$AdMob.load_interstitial()
 	Event.connect("change_scene",self,"_on_SceneFade_scene_changed")
 	Event.connect("level_passed",self,"_on_Grass_endLevel")
-	
+	_checkLastLevel()
+
+func _checkLastLevel():
+	next_level = load("res://res/level/LevelScene_"+str(GamePlay.current_level)+".tscn").instance()
+	currentLevel.queue_free()
+	GamePlay.fader.fade_out()
+#	pass
 	
 func _input(event):
 	if Input.is_action_pressed("ui_accept"):
+		GamePlay.save_level()
 		Audio.stopLevelComplete()
+		Audio.stopFlowerPop()
+
 		GamePlay.totalGrassLevel = 0
 		GamePlay.grassPoint = 0
-		GamePlay.current_level = LevelNow
-		get_tree().reload_current_scene()
+		print("reload now level")
+		print(GamePlay.current_level)
+		next_level = load("res://res/level/LevelScene_"+str(GamePlay.current_level)+".tscn").instance()
+		currentLevel.queue_free()
+		GamePlay.fader.fade_out()
 	
 	if Input.is_action_pressed("ui_home"):
-		GamePlay.current_level =1
+		GamePlay.save_level()
 		GamePlay.totalGrassLevel = 0
 		GamePlay.grassPoint = 0
 		Audio.stopFlowerPop()
+		Audio.stopLevelComplete()
 		get_tree().change_scene("res://res/ui/MainMenu.tscn")
 		
 func _on_Grass_endLevel():
@@ -35,31 +48,33 @@ func _on_Grass_endLevel():
 	particleFinishLevel.emitting = true
 	yield(get_tree().create_timer(2.70), "timeout")
 	Audio.stopLevelComplete()
-#	Audio.pauseBGMusic()
 	Audio.volumeBGMusic(0)
 	complete_level()
-	
 	particleFinishLevel.emitting = false
-	
+	_on_Save_level()
 	
 func complete_level():
 	GamePlay.totalGrassLevel = 0
 	GamePlay.grassPoint = 0
 	GamePlay.current_level += 1
+	_on_Save_level()
 	var isNextLevels = GamePlay.current_level % 2 > 0
+	
 	if GamePlay.current_level > 0 and  isNextLevels:
 		$AdMob.show_interstitial()
-#	if currentLevel not null :
-		
 	
 #	cek if max level 
 	if GamePlay.current_level <= GamePlay.max_level:
-		
 		Event.emit_signal("update_level")
 		next_level = load("res://res/level/LevelScene_"+str(GamePlay.current_level)+".tscn").instance()
 		currentLevel.queue_free()
 		GamePlay.fader.fade_out()
+		print("next Level")
+		print(GamePlay.current_level)
 	else:
+		#reset
+		GamePlay.current_level = 1
+		_on_Save_level()
 		emit_signal("game_over")
 #	$unity_ads.show_interstitial()
 	
@@ -100,3 +115,7 @@ func _on_AdMob_interstitial_closed():
 func _on_AdMob_interstitial_loaded():
 	pass # Replace with function body.
 
+func _on_Save_level():
+	GamePlay.save_level()
+	$OneSignal.setLastLevel(GamePlay.current_level)
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/Gui/bg.png" type="Texture" id=1]
 [ext_resource path="res://assets/Gui/Button/PlayButton.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/Gui/Button/ExitPNG.png" type="Texture" id=9]
 [ext_resource path="res://assets/Gui/Button/StarPNG.png" type="Texture" id=10]
 [ext_resource path="res://assets/audio/bg_music.mp3" type="AudioStream" id=11]
+[ext_resource path="res://lib/onesignal-plugin-api/onesignal.gd" type="Script" id=12]
 
 [sub_resource type="DynamicFontData" id=5]
 font_path = "res://assets/Fonts/Yeyey-1pK2.otf"
@@ -325,6 +326,9 @@ anims/start = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
+
+[node name="OneSignal" type="Node" parent="."]
+script = ExtResource( 12 )
 
 [connection signal="pressed" from="MainMenu/MarginContainer/VBoxContainer/Control/BtnExit" to="." method="_on_BtnExit_pressed"]
 [connection signal="pressed" from="MainMenu/MarginContainer/VBoxContainer/Control2/VBoxContainer/HBoxContainer/BtnShadow/BtnPlay" to="." method="_on_BtnPlay_pressed"]

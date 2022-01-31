@@ -4,6 +4,3 @@
 
 [node name="SwipeDetector" type="Node2D"]
 script = ExtResource( 1 )
-process_method = null
-distance_threshold = 10.0
-directions_mode = "Four Directions"

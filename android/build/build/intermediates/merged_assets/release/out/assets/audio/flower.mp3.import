@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/flower.mp3-238d8a8430bda11e6123b4d591b34c18.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/flower.mp3"
+dest_files=[ "res://.import/flower.mp3-238d8a8430bda11e6123b4d591b34c18.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

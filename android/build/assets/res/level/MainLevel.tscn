@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://res/level/Level13D.gd" type="Script" id=1]
 [ext_resource path="res://lib/admob-lib/admob.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://res/level/LevelScene_1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://res/ui/HUD.tscn" type="PackedScene" id=5]
 [ext_resource path="res://res/ui/PopupGameOver.tscn" type="PackedScene" id=6]
+[ext_resource path="res://lib/onesignal-plugin-api/onesignal.gd" type="Script" id=7]
 
 [sub_resource type="ProceduralSky" id=7]
 
@@ -71,6 +72,9 @@ damping = 10.0
 angle = 10.0
 
 [node name="PopupGameOver" parent="." instance=ExtResource( 6 )]
+
+[node name="OneSignal" type="Node" parent="."]
+script = ExtResource( 7 )
 
 [connection signal="game_over" from="." to="PopupGameOver" method="_on_MainLevel_game_over"]
 [connection signal="banner_failed_to_load" from="AdMob" to="." method="_on_AdMob_banner_failed_to_load"]

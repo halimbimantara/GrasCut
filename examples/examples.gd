@@ -21,7 +21,7 @@ func load_options():
 
 func populate_dropdown():
   for option in options.keys():
-    dropdown.add_item(option)
+	dropdown.add_item(option)
 
 func _ready():
   load_options()
@@ -29,14 +29,14 @@ func _ready():
 
 func launch():
   if dropdown.get_selected() > -1:
-    var selected_example = 0
-    var selected_name = 'None'
-    selected_name = options.keys()[dropdown.get_selected()]
-    selected_example = options[selected_name]
-    print('Selected example ', selected_name, ' : ', selected_example)
-    load_example(selected_example)
+	var selected_example = 0
+	var selected_name = 'None'
+	selected_name = options.keys()[dropdown.get_selected()]
+	selected_example = options[selected_name]
+	print('Selected example ', selected_name, ' : ', selected_example)
+	load_example(selected_example)
   else:
-    print('No example selected')
+	print('No example selected')
 
 func load_example(example):
   print('Loading example ', example)

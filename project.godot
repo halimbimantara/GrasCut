@@ -19,51 +19,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/bpb_placement/bpbp_main.gd"
 }, {
-"base": "InputEventAction",
-"class": "InputEventSwipe",
-"language": "GDScript",
-"path": "res://SwipeModule/InputEventSwipe.gd"
-}, {
 "base": "Node",
 "class": "OneSignal",
 "language": "GDScript",
 "path": "res://lib/onesignal-plugin-api/onesignal.gd"
 }, {
-"base": "_SwipeEventCore",
-"class": "SwipeModule",
-"language": "GDScript",
-"path": "res://SwipeModule/SwipeModule.gd"
-}, {
-"base": "InputEventAction",
-"class": "ThrowedFooter",
-"language": "GDScript",
-"path": "res://SwipeModule/ThrowedFooter.gd"
-}, {
-"base": "InputEventAction",
-"class": "ThrowedHeader",
-"language": "GDScript",
-"path": "res://SwipeModule/ThrowedHeader.gd"
-}, {
 "base": "Node",
 "class": "UnityAdsAPI",
 "language": "GDScript",
 "path": "res://lib/unity-ads-plugin-api/unity_ads.gd"
-}, {
-"base": "Node",
-"class": "_SwipeEventCore",
-"language": "GDScript",
-"path": "res://SwipeModule/_SwipeEventCore.gd"
 } ]
 _global_script_class_icons={
 "AdMob": "res://lib/admob-lib/icon.png",
 "BPBP_Main": "",
-"InputEventSwipe": "res://SwipeModule/SwipeEventCore.png",
 "OneSignal": "res://lib/onesignal-plugin-api/onesignal.png",
-"SwipeModule": "",
-"ThrowedFooter": "res://SwipeModule/SwipeEventCore.png",
-"ThrowedHeader": "res://SwipeModule/SwipeEventCore.png",
-"UnityAdsAPI": "",
-"_SwipeEventCore": "res://SwipeModule/SwipeEventCore.png"
+"UnityAdsAPI": ""
 }
 
 [application]
@@ -80,6 +50,7 @@ Onesignal="res://lib/onesignal-plugin-api/onesignal.gd"
 Audio="*res://res/item/Audio.tscn"
 rateme="res://scripts/rateme.gd"
 Event="*res://src/core/Event.gd"
+Addonsave="*res://AddonSave/addonsave.gd"
 
 [compression]
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/FSXNVYR-surprise-cash-bonus.mp3-467defafb90e8ba58c31722dc4b5dbd9.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/FSXNVYR-surprise-cash-bonus.mp3"
+dest_files=[ "res://.import/FSXNVYR-surprise-cash-bonus.mp3-467defafb90e8ba58c31722dc4b5dbd9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

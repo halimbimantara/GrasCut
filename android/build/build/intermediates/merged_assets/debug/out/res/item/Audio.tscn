@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/audio/flower.mp3" type="AudioStream" id=1]
+[ext_resource path="res://assets/audio/grass_cut.mp3" type="AudioStream" id=2]
+[ext_resource path="res://src/item/Audio.gd" type="Script" id=3]
+[ext_resource path="res://assets/audio/bg_music.mp3" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/ending_stage.mp3" type="AudioStream" id=5]
+[ext_resource path="res://assets/audio/btn_click.mp3" type="AudioStream" id=6]
+
+[node name="Audio" type="Node"]
+script = ExtResource( 3 )
+
+[node name="BgMusic" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 4 )
+unit_db = 30.0
+
+[node name="LevelComplete" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 5 )
+unit_db = 30.0
+
+[node name="GrassCut" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 2 )
+unit_db = 32.0
+emission_angle_enabled = true
+
+[node name="FlowerPop" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 1 )
+unit_db = 40.0
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
