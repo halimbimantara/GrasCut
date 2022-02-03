@@ -17,7 +17,7 @@
         android:name=".GodotInstrumentation"
         android:icon="@mipmap/icon"
         android:label="@string/godot_project_name_string"
-        android:targetPackage="com.hawlagames.$genname" />
+        android:targetPackage="studio.blessed.$genname" />
     <application android:label="@string/godot_project_name_string"
         android:allowBackup="true"
         android:isGame="true"

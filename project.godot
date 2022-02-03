@@ -40,7 +40,8 @@ _global_script_class_icons={
 
 config/name="GrasCut"
 run/main_scene="res://res/ui/Splash.tscn"
-boot_splash/image="res://assets/Gui/splash_highres.png"
+boot_splash/image="res://assets/res-android/mipmap-xxxhdpi/ic_launcher 2.png"
+boot_splash/fullsize=false
 config/icon="res://LOGO GRASS CUTS.png"
 
 [autoload]

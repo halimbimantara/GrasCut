@@ -1,9 +1,9 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.hawlagames.grascut"
+3    package="studio.blessed.grascut"
 4    android:installLocation="auto"
 5    android:versionCode="1"
-6    android:versionName="1.0.0" >
+6    android:versionName="1.0.10" >
 7
 8    <uses-sdk
 9        android:minSdkVersion="19"
@@ -50,7 +50,7 @@
 30-->/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/src/debug/AndroidManifest.xml:18:9-36
 31        android:label="@string/godot_project_name_string"
 31-->/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/src/debug/AndroidManifest.xml:19:9-58
-32        android:targetPackage="com.hawlagames.$genname" />
+32        android:targetPackage="studio.blessed.$genname" />
 32-->/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/src/debug/AndroidManifest.xml:20:9-56
 33    <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
 34    <uses-feature
@@ -61,12 +61,12 @@
 36-->/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:21:9-32
 37    <permission
 37-->[com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:7:5-9:47
-38        android:name="com.hawlagames.grascut.permission.C2D_MESSAGE"
+38        android:name="studio.blessed.grascut.permission.C2D_MESSAGE"
 38-->[com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:8:9-63
 39        android:protectionLevel="signature" />
 39-->[com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:9:9-44
 40
-41    <uses-permission android:name="com.hawlagames.grascut.permission.C2D_MESSAGE" /> <!-- c2dm RECEIVE are basic requirements for push messages through Google's FCM -->
+41    <uses-permission android:name="studio.blessed.grascut.permission.C2D_MESSAGE" /> <!-- c2dm RECEIVE are basic requirements for push messages through Google's FCM -->
 41-->[com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:11:5-79
 41-->[com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:11:22-76
 42    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Required, makes sure notifications are delivered on time. -->
@@ -175,7 +175,7 @@
 89            android:resizeableActivity="false"
 89-->/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:61:13-47
 90            android:screenOrientation="portrait"
-90-->/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:59:13-50
+90-->/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:59:13-48
 91            android:theme="@style/GodotAppSplashTheme" >
 91-->/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:56:13-55
 92            <intent-filter>
@@ -311,7 +311,7 @@
 166-->[com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:56:17-81
 166-->[com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:56:25-78
 167
-168                <category android:name="com.hawlagames.grascut" />
+168                <category android:name="studio.blessed.grascut" />
 168-->[com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:58:17-61
 168-->[com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:58:27-58
 169            </intent-filter>
@@ -537,7 +537,7 @@
 288-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/wlb-mac/.gradle/caches/transforms-3/05135c35a085f3cd1e966eaf563277cb/transformed/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:35:9-39:39
 289            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
 289-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/wlb-mac/.gradle/caches/transforms-3/05135c35a085f3cd1e966eaf563277cb/transformed/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:36:13-76
-290            android:authorities="com.hawlagames.grascut.mobileadsinitprovider"
+290            android:authorities="studio.blessed.grascut.mobileadsinitprovider"
 290-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/wlb-mac/.gradle/caches/transforms-3/05135c35a085f3cd1e966eaf563277cb/transformed/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:37:13-73
 291            android:exported="false"
 291-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/wlb-mac/.gradle/caches/transforms-3/05135c35a085f3cd1e966eaf563277cb/transformed/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:38:13-37
@@ -547,7 +547,7 @@
 293-->[com.google.firebase:firebase-common:20.0.0] /Users/wlb-mac/.gradle/caches/transforms-3/dd12a158a2b47d8eb1d04758d5fc97d6/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
 294            android:name="com.google.firebase.provider.FirebaseInitProvider"
 294-->[com.google.firebase:firebase-common:20.0.0] /Users/wlb-mac/.gradle/caches/transforms-3/dd12a158a2b47d8eb1d04758d5fc97d6/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
-295            android:authorities="com.hawlagames.grascut.firebaseinitprovider"
+295            android:authorities="studio.blessed.grascut.firebaseinitprovider"
 295-->[com.google.firebase:firebase-common:20.0.0] /Users/wlb-mac/.gradle/caches/transforms-3/dd12a158a2b47d8eb1d04758d5fc97d6/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
 296            android:directBootAware="true"
 296-->[com.google.firebase:firebase-common:20.0.0] /Users/wlb-mac/.gradle/caches/transforms-3/dd12a158a2b47d8eb1d04758d5fc97d6/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
@@ -567,7 +567,7 @@
 304-->[androidx.work:work-runtime:2.7.1] /Users/wlb-mac/.gradle/caches/transforms-3/f72eaa0e9d78d9e4b47096d74590678a/transformed/work-runtime-2.7.1/AndroidManifest.xml:31:9-39:20
 305            android:name="androidx.startup.InitializationProvider"
 305-->[androidx.work:work-runtime:2.7.1] /Users/wlb-mac/.gradle/caches/transforms-3/f72eaa0e9d78d9e4b47096d74590678a/transformed/work-runtime-2.7.1/AndroidManifest.xml:32:13-67
-306            android:authorities="com.hawlagames.grascut.androidx-startup"
+306            android:authorities="studio.blessed.grascut.androidx-startup"
 306-->[androidx.work:work-runtime:2.7.1] /Users/wlb-mac/.gradle/caches/transforms-3/f72eaa0e9d78d9e4b47096d74590678a/transformed/work-runtime-2.7.1/AndroidManifest.xml:33:13-68
 307            android:exported="false" >
 307-->[androidx.work:work-runtime:2.7.1] /Users/wlb-mac/.gradle/caches/transforms-3/f72eaa0e9d78d9e4b47096d74590678a/transformed/work-runtime-2.7.1/AndroidManifest.xml:34:13-37

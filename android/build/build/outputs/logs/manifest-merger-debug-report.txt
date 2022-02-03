@@ -231,8 +231,8 @@ ADDED from /Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/Androi
 MERGED from /Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:53:9-75:20
 MERGED from /Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:53:9-75:20
 	android:screenOrientation
-		ADDED from /Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:59:13-50
-		REJECTED from /Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:59:13-50
+		ADDED from /Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:59:13-48
+		REJECTED from /Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:59:13-48
 	android:label
 		ADDED from /Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:55:13-62
 		ADDED from /Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/AndroidManifest.xml:55:13-62
@@ -608,7 +608,7 @@ ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transfo
 		ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:9:9-44
 	android:name
 		ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:8:9-63
-permission#com.hawlagames.grascut.permission.C2D_MESSAGE
+permission#studio.blessed.grascut.permission.C2D_MESSAGE
 ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:7:5-9:47
 	android:protectionLevel
 		ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:9:9-44
@@ -618,7 +618,7 @@ uses-permission#${applicationId}.permission.C2D_MESSAGE
 ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:11:5-79
 	android:name
 		ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:11:22-76
-uses-permission#com.hawlagames.grascut.permission.C2D_MESSAGE
+uses-permission#studio.blessed.grascut.permission.C2D_MESSAGE
 ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:11:5-79
 	android:name
 		ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:11:22-76
@@ -728,7 +728,7 @@ intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:$
 ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:55:13-59:29
 	android:priority
 		ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:55:28-50
-intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:com.hawlagames.grascut
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:studio.blessed.grascut
 ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:55:13-59:29
 	android:priority
 		ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:55:28-50
@@ -740,7 +740,7 @@ category#${applicationId}
 ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:58:17-61
 	android:name
 		ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:58:27-58
-category#com.hawlagames.grascut
+category#studio.blessed.grascut
 ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:58:17-61
 	android:name
 		ADDED from [com.onesignal:OneSignal:4.6.6] /Users/wlb-mac/.gradle/caches/transforms-3/5daf17d8266934109c5d447e7e71dea7/transformed/jetified-OneSignal-4.6.6/AndroidManifest.xml:58:27-58
