@@ -1,7 +1,0 @@
-#Sun Jan 30 12:41:00 WIB 2022
-base.1=/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/dex/release/mergeDexRelease/classes2.dex
-path.1=classes2.dex
-base.0=/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/dex/release/mergeDexRelease/classes.dex
-renamed.1=classes2.dex
-renamed.0=classes.dex
-path.0=classes.dex

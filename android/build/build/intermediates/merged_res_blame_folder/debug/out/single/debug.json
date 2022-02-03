@@ -8,12 +8,20 @@
         "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/mipmap-mdpi-v4/icon.png"
     },
     {
+        "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/mipmap_icon_background.png.flat",
+        "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/mipmap/icon_background.png"
+    },
+    {
         "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/mipmap_icon_foreground.png.flat",
         "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/mipmap/icon_foreground.png"
     },
     {
         "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/mipmap-xxxhdpi-v4_icon_foreground.png.flat",
         "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/mipmap-xxxhdpi-v4/icon_foreground.png"
+    },
+    {
+        "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/mipmap-xhdpi-v4_icon_background.png.flat",
+        "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/mipmap-xhdpi-v4/icon_background.png"
     },
     {
         "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/mipmap_icon.png.flat",
@@ -48,12 +56,28 @@
         "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/mipmap-xxhdpi-v4/icon.png"
     },
     {
+        "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/mipmap-xxxhdpi-v4_icon_background.png.flat",
+        "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/mipmap-xxxhdpi-v4/icon_background.png"
+    },
+    {
+        "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/mipmap-mdpi-v4_icon_background.png.flat",
+        "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/mipmap-mdpi-v4/icon_background.png"
+    },
+    {
         "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/mipmap-xxhdpi-v4_icon_foreground.png.flat",
         "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/mipmap-xxhdpi-v4/icon_foreground.png"
     },
     {
         "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/drawable-nodpi_splash_bg_color.png.flat",
         "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/drawable-nodpi/splash_bg_color.png"
+    },
+    {
+        "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/mipmap-xxhdpi-v4_icon_background.png.flat",
+        "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/mipmap-xxhdpi-v4/icon_background.png"
+    },
+    {
+        "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/mipmap-hdpi-v4_icon_background.png.flat",
+        "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/mipmap-hdpi-v4/icon_background.png"
     },
     {
         "merged": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/merged_res/debug/mipmap-xxxhdpi-v4_icon.png.flat",
