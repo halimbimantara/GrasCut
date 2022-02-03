@@ -54,15 +54,13 @@ func _on_BtnPlay_pressed():
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	tweens.start()
-#	Audio.playBGMusic()
 
 func _on_BtnRateme_pressed():
-#	rateme.show()
-	pass
+	rateme.show()
 
 
 func _on_BtnPrivacy_pressed():
-	OS.shell_open("https://google.com")
+	OS.shell_open("https://colddrygame.github.io/privacy-policy/grasscuts")
 
 
 func _on_BtnExit_pressed():

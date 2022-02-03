@@ -50,7 +50,7 @@ GamePlay="*res://src/core/Game.gd"
 SceneFade="*res://res/ui/SceneFade.tscn"
 Onesignal="res://lib/onesignal-plugin-api/onesignal.gd"
 Audio="*res://res/item/Audio.tscn"
-rateme="res://scripts/rateme.gd"
+rateme="*res://scripts/rateme.gd"
 Event="*res://src/core/Event.gd"
 Addonsave="*res://AddonSave/addonsave.gd"
 

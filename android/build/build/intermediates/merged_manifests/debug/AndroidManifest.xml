@@ -67,7 +67,8 @@
     <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- EvMe -->
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
-    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" /> <!-- Permission will be merged into the manifest of the hosting app. -->
+    <!-- Is required to launch foreground extraction service for targetSdkVersion 28+. -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
@@ -109,7 +110,7 @@
         <!-- CHUNK_APPLICATION_END -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" /> <!-- Records the version of the Godot library -->
+            android:value="ca-app-pub-5730577896277719~2737812589" /> <!-- Records the version of the Godot library -->
         <meta-data
             android:name="org.godotengine.library.version"
             android:value="3.4.2.stable" />
@@ -140,7 +141,18 @@
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
             android:hardwareAccelerated="false"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-
+        <!--
+    Plugin metadata:
+    - In the `android:name` attribute, the `org.godotengine.plugin.v1` prefix
+    is required so Godot can recognize the project as a valid Godot
+    Android plugin. The plugin name following the prefix should match the value
+    of the plugin name returned by the plugin initializer.
+    - The `android:value` attribute should be the classpath to the plugin
+    initializer.
+        -->
+        <meta-data
+            android:name="org.godotengine.plugin.v1.RateMe"
+            android:value="ru.mobilap.rateme.RateMe" />
         <meta-data
             android:name="org.godotengine.plugin.v1.GodotOneSignal"
             android:value="org.godot.onesignalplugin.GodotOneSignal" /> <!-- <meta-data -->
@@ -299,7 +311,24 @@
 
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:value="@integer/google_play_services_version" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+        <activity
+            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+            android:enabled="false"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:process=":playcore_missing_splits_activity"
+            android:stateNotNeeded="true" />
+        <activity
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:enabled="false"
+            android:exported="false"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The service will be merged into the manifest of the hosting app. -->
+        <service
+            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+            android:enabled="false"
+            android:exported="true" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

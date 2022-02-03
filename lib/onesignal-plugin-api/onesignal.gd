@@ -3,7 +3,7 @@ extends Node
 class_name OneSignal , "res://lib/onesignal-plugin-api/onesignal.png"
 
 
-export var app_key : String = "87fec3b3-1a1d-4e39-9245-55fd0212cb98"
+export var app_key : String = "babf2d6f-4543-4556-919c-ad773abe6b42"
 export var is_debug : bool = true
 
 var _onesignal : Object = null

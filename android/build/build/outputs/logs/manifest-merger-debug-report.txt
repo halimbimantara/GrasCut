@@ -12,6 +12,7 @@ MERGED from /Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/Andro
 MERGED from [godot-lib.debug.aar] /Users/wlb-mac/.gradle/caches/transforms-3/7d496d812684c77fc04000caf95fd2e1/transformed/jetified-godot-lib.debug/AndroidManifest.xml:2:1-26:12
 MERGED from [GodotUnityAds.1.0.1.aar] /Users/wlb-mac/.gradle/caches/transforms-3/3fbced4795ff938e4305c29e0de02a6f/transformed/jetified-GodotUnityAds.1.0.1/AndroidManifest.xml:2:1-18:12
 MERGED from [unity-ads.aar] /Users/wlb-mac/.gradle/caches/transforms-3/e1e2befabbbbafddb82fcde9ea5bcc9e/transformed/jetified-unity-ads/AndroidManifest.xml:2:1-35:12
+MERGED from [RateMe.release.aar] /Users/wlb-mac/.gradle/caches/transforms-3/8e5930398f0c85aa12d0c46773570f85/transformed/jetified-RateMe.release/AndroidManifest.xml:2:1-27:12
 MERGED from [GodotOneSignal.1.0.1.aar] /Users/wlb-mac/.gradle/caches/transforms-3/f43806c33bca2a06409ebcaf2ac9cf58/transformed/jetified-GodotOneSignal.1.0.1/AndroidManifest.xml:2:1-25:12
 MERGED from [GodotAdMob.5.1.0.release.aar] /Users/wlb-mac/.gradle/caches/transforms-3/f9a294889bc53f9dbafd07e875f55d10/transformed/jetified-GodotAdMob.5.1.0.release/AndroidManifest.xml:2:1-19:12
 MERGED from [androidx.multidex:multidex:2.0.1] /Users/wlb-mac/.gradle/caches/transforms-3/a8cd735beb51fe17de1af3b4972a373d/transformed/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
@@ -37,6 +38,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.1.0] /U
 MERGED from [com.google.android.gms:play-services-measurement-base:17.1.0] /Users/wlb-mac/.gradle/caches/transforms-3/42fb2ebbc105c3ada46efffefad8c7af/transformed/jetified-play-services-measurement-base-17.1.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] /Users/wlb-mac/.gradle/caches/transforms-3/7bfbf15f82fbddddc312ca658b61dde9/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.3.6] /Users/wlb-mac/.gradle/caches/transforms-3/3dc028d946a4c1298d1f908800236ba5/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:2:1-19:12
 MERGED from [androidx.activity:activity:1.2.4] /Users/wlb-mac/.gradle/caches/transforms-3/e56c3dfd5a859714daa88d5dd65ddcd9/transformed/jetified-activity-1.2.4/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.browser:browser:1.0.0] /Users/wlb-mac/.gradle/caches/transforms-3/21b42d1769c539964776c92a9202f934/transformed/browser-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] /Users/wlb-mac/.gradle/caches/transforms-3/32c263f9b05df077bd8537cab6c9eedf/transformed/jetified-appcompat-resources-1.3.1/AndroidManifest.xml:17:1-24:12
@@ -136,6 +138,8 @@ MERGED from [GodotUnityAds.1.0.1.aar] /Users/wlb-mac/.gradle/caches/transforms-3
 MERGED from [GodotUnityAds.1.0.1.aar] /Users/wlb-mac/.gradle/caches/transforms-3/3fbced4795ff938e4305c29e0de02a6f/transformed/jetified-GodotUnityAds.1.0.1/AndroidManifest.xml:12:5-16:19
 MERGED from [unity-ads.aar] /Users/wlb-mac/.gradle/caches/transforms-3/e1e2befabbbbafddb82fcde9ea5bcc9e/transformed/jetified-unity-ads/AndroidManifest.xml:12:5-33:19
 MERGED from [unity-ads.aar] /Users/wlb-mac/.gradle/caches/transforms-3/e1e2befabbbbafddb82fcde9ea5bcc9e/transformed/jetified-unity-ads/AndroidManifest.xml:12:5-33:19
+MERGED from [RateMe.release.aar] /Users/wlb-mac/.gradle/caches/transforms-3/8e5930398f0c85aa12d0c46773570f85/transformed/jetified-RateMe.release/AndroidManifest.xml:11:5-25:19
+MERGED from [RateMe.release.aar] /Users/wlb-mac/.gradle/caches/transforms-3/8e5930398f0c85aa12d0c46773570f85/transformed/jetified-RateMe.release/AndroidManifest.xml:11:5-25:19
 MERGED from [GodotOneSignal.1.0.1.aar] /Users/wlb-mac/.gradle/caches/transforms-3/f43806c33bca2a06409ebcaf2ac9cf58/transformed/jetified-GodotOneSignal.1.0.1/AndroidManifest.xml:9:5-23:19
 MERGED from [GodotOneSignal.1.0.1.aar] /Users/wlb-mac/.gradle/caches/transforms-3/f43806c33bca2a06409ebcaf2ac9cf58/transformed/jetified-GodotOneSignal.1.0.1/AndroidManifest.xml:9:5-23:19
 MERGED from [GodotAdMob.5.1.0.release.aar] /Users/wlb-mac/.gradle/caches/transforms-3/f9a294889bc53f9dbafd07e875f55d10/transformed/jetified-GodotAdMob.5.1.0.release/AndroidManifest.xml:13:5-17:19
@@ -170,6 +174,8 @@ MERGED from [com.google.android.gms:play-services-measurement-base:17.1.0] /User
 MERGED from [com.google.android.gms:play-services-measurement-base:17.1.0] /Users/wlb-mac/.gradle/caches/transforms-3/42fb2ebbc105c3ada46efffefad8c7af/transformed/jetified-play-services-measurement-base-17.1.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] /Users/wlb-mac/.gradle/caches/transforms-3/7bfbf15f82fbddddc312ca658b61dde9/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] /Users/wlb-mac/.gradle/caches/transforms-3/7bfbf15f82fbddddc312ca658b61dde9/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:10:3-17:17
+MERGED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:10:3-17:17
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/wlb-mac/.gradle/caches/transforms-3/f72eaa0e9d78d9e4b47096d74590678a/transformed/work-runtime-2.7.1/AndroidManifest.xml:30:5-143:19
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/wlb-mac/.gradle/caches/transforms-3/f72eaa0e9d78d9e4b47096d74590678a/transformed/work-runtime-2.7.1/AndroidManifest.xml:30:5-143:19
 MERGED from [androidx.core:core:1.6.0] /Users/wlb-mac/.gradle/caches/transforms-3/29bd35655f03b7f3e267b0ec8908d5d2/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
@@ -297,6 +303,8 @@ MERGED from [GodotUnityAds.1.0.1.aar] /Users/wlb-mac/.gradle/caches/transforms-3
 MERGED from [GodotUnityAds.1.0.1.aar] /Users/wlb-mac/.gradle/caches/transforms-3/3fbced4795ff938e4305c29e0de02a6f/transformed/jetified-GodotUnityAds.1.0.1/AndroidManifest.xml:5:5-7:41
 MERGED from [unity-ads.aar] /Users/wlb-mac/.gradle/caches/transforms-3/e1e2befabbbbafddb82fcde9ea5bcc9e/transformed/jetified-unity-ads/AndroidManifest.xml:5:5-7:41
 MERGED from [unity-ads.aar] /Users/wlb-mac/.gradle/caches/transforms-3/e1e2befabbbbafddb82fcde9ea5bcc9e/transformed/jetified-unity-ads/AndroidManifest.xml:5:5-7:41
+MERGED from [RateMe.release.aar] /Users/wlb-mac/.gradle/caches/transforms-3/8e5930398f0c85aa12d0c46773570f85/transformed/jetified-RateMe.release/AndroidManifest.xml:7:5-9:41
+MERGED from [RateMe.release.aar] /Users/wlb-mac/.gradle/caches/transforms-3/8e5930398f0c85aa12d0c46773570f85/transformed/jetified-RateMe.release/AndroidManifest.xml:7:5-9:41
 MERGED from [GodotOneSignal.1.0.1.aar] /Users/wlb-mac/.gradle/caches/transforms-3/f43806c33bca2a06409ebcaf2ac9cf58/transformed/jetified-GodotOneSignal.1.0.1/AndroidManifest.xml:5:5-7:41
 MERGED from [GodotOneSignal.1.0.1.aar] /Users/wlb-mac/.gradle/caches/transforms-3/f43806c33bca2a06409ebcaf2ac9cf58/transformed/jetified-GodotOneSignal.1.0.1/AndroidManifest.xml:5:5-7:41
 MERGED from [GodotAdMob.5.1.0.release.aar] /Users/wlb-mac/.gradle/caches/transforms-3/f9a294889bc53f9dbafd07e875f55d10/transformed/jetified-GodotAdMob.5.1.0.release/AndroidManifest.xml:7:5-9:41
@@ -347,6 +355,8 @@ MERGED from [com.google.android.gms:play-services-basement:17.6.0] /Users/wlb-ma
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] /Users/wlb-mac/.gradle/caches/transforms-3/7bfbf15f82fbddddc312ca658b61dde9/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.3.6] /Users/wlb-mac/.gradle/caches/transforms-3/3dc028d946a4c1298d1f908800236ba5/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] /Users/wlb-mac/.gradle/caches/transforms-3/3dc028d946a4c1298d1f908800236ba5/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:4:3-70
+MERGED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:4:3-70
 MERGED from [androidx.activity:activity:1.2.4] /Users/wlb-mac/.gradle/caches/transforms-3/e56c3dfd5a859714daa88d5dd65ddcd9/transformed/jetified-activity-1.2.4/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.2.4] /Users/wlb-mac/.gradle/caches/transforms-3/e56c3dfd5a859714daa88d5dd65ddcd9/transformed/jetified-activity-1.2.4/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.0.0] /Users/wlb-mac/.gradle/caches/transforms-3/21b42d1769c539964776c92a9202f934/transformed/browser-1.0.0/AndroidManifest.xml:20:5-44
@@ -580,6 +590,12 @@ ADDED from [unity-ads.aar] /Users/wlb-mac/.gradle/caches/transforms-3/e1e2befabb
 		ADDED from [unity-ads.aar] /Users/wlb-mac/.gradle/caches/transforms-3/e1e2befabbbbafddb82fcde9ea5bcc9e/transformed/jetified-unity-ads/AndroidManifest.xml:32:13-71
 	android:name
 		ADDED from [unity-ads.aar] /Users/wlb-mac/.gradle/caches/transforms-3/e1e2befabbbbafddb82fcde9ea5bcc9e/transformed/jetified-unity-ads/AndroidManifest.xml:29:13-82
+meta-data#org.godotengine.plugin.v1.RateMe
+ADDED from [RateMe.release.aar] /Users/wlb-mac/.gradle/caches/transforms-3/8e5930398f0c85aa12d0c46773570f85/transformed/jetified-RateMe.release/AndroidManifest.xml:22:9-24:56
+	android:value
+		ADDED from [RateMe.release.aar] /Users/wlb-mac/.gradle/caches/transforms-3/8e5930398f0c85aa12d0c46773570f85/transformed/jetified-RateMe.release/AndroidManifest.xml:24:13-53
+	android:name
+		ADDED from [RateMe.release.aar] /Users/wlb-mac/.gradle/caches/transforms-3/8e5930398f0c85aa12d0c46773570f85/transformed/jetified-RateMe.release/AndroidManifest.xml:23:13-60
 meta-data#org.godotengine.plugin.v1.GodotOneSignal
 ADDED from [GodotOneSignal.1.0.1.aar] /Users/wlb-mac/.gradle/caches/transforms-3/f43806c33bca2a06409ebcaf2ac9cf58/transformed/jetified-GodotOneSignal.1.0.1/AndroidManifest.xml:10:9-12:72
 	android:value
@@ -977,9 +993,45 @@ ADDED from [com.google.android.gms:play-services-basement:17.6.0] /Users/wlb-mac
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:17.6.0] /Users/wlb-mac/.gradle/caches/transforms-3/7bfbf15f82fbddddc312ca658b61dde9/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:24:13-58
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from [androidx.work:work-runtime:2.7.1] /Users/wlb-mac/.gradle/caches/transforms-3/f72eaa0e9d78d9e4b47096d74590678a/transformed/work-runtime-2.7.1/AndroidManifest.xml:28:5-77
+ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:8:3-74
+MERGED from [androidx.work:work-runtime:2.7.1] /Users/wlb-mac/.gradle/caches/transforms-3/f72eaa0e9d78d9e4b47096d74590678a/transformed/work-runtime-2.7.1/AndroidManifest.xml:28:5-77
+MERGED from [androidx.work:work-runtime:2.7.1] /Users/wlb-mac/.gradle/caches/transforms-3/f72eaa0e9d78d9e4b47096d74590678a/transformed/work-runtime-2.7.1/AndroidManifest.xml:28:5-77
 	android:name
-		ADDED from [androidx.work:work-runtime:2.7.1] /Users/wlb-mac/.gradle/caches/transforms-3/f72eaa0e9d78d9e4b47096d74590678a/transformed/work-runtime-2.7.1/AndroidManifest.xml:28:22-74
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:8:20-72
+activity#com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity
+ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:12:5-271
+	android:process
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:12:152-203
+	android:enabled
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:12:103-126
+	android:stateNotNeeded
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:12:240-269
+	android:launchMode
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:12:204-239
+	android:exported
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:12:127-151
+	android:name
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:12:15-102
+activity#com.google.android.play.core.common.PlayCoreDialogWrapperActivity
+ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:13:5-226
+	android:enabled
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:13:96-119
+	android:stateNotNeeded
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:13:145-174
+	android:exported
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:13:120-144
+	android:theme
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:13:175-224
+	android:name
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:13:15-95
+service#com.google.android.play.core.assetpacks.AssetPackExtractionService
+ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:16:5-145
+	android:enabled
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:16:96-119
+	android:exported
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:16:120-143
+	android:name
+		ADDED from [com.google.android.play:core:1.8.3] /Users/wlb-mac/.gradle/caches/transforms-3/b20f565b8a37a1bf42cb97a204edeb90/transformed/jetified-core-1.8.3/AndroidManifest.xml:16:14-95
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.work:work-runtime:2.7.1] /Users/wlb-mac/.gradle/caches/transforms-3/f72eaa0e9d78d9e4b47096d74590678a/transformed/work-runtime-2.7.1/AndroidManifest.xml:31:9-39:20
 MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/wlb-mac/.gradle/caches/transforms-3/c32a3a3349f7efd522b6c92e68aba491/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:26:9-30:34

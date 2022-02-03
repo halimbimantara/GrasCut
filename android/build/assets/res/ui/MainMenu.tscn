@@ -191,7 +191,7 @@ scale = Vector2( 0.87647, 0.869231 )
 texture = ExtResource( 9 )
 
 [node name="Control2" type="Control" parent="MainMenu/MarginContainer/VBoxContainer"]
-margin_top = 380.0
+margin_top = 304.0
 margin_right = 690.0
 margin_bottom = 1036.0
 rect_min_size = Vector2( 300, 0 )
