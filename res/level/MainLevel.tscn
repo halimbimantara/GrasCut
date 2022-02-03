@@ -51,10 +51,12 @@ transform = Transform( 0.750113, 0.457152, -0.477853, 0.6311, -0.710756, 0.31070
 
 [node name="AdMob" type="Node" parent="."]
 script = ExtResource( 2 )
+is_real = true
 banner_on_top = false
-banner_id = "ca-app-pub-3940256099942544/6300978111"
-interstitial_id = "ca-app-pub-3940256099942544/1033173712"
+banner_id = "ca-app-pub-5730577896277719/3531007748"
+interstitial_id = "ca-app-pub-5730577896277719/3803482244"
 child_directed = true
+max_ad_content_rate = "T"
 
 [node name="particle_congrate" type="CPUParticles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0658646, 0, -5.66194 )
