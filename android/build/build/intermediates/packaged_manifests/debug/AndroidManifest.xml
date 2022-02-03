@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hawlagames.grascut"
+    package="studio.blessed.grascut"
     android:installLocation="auto"
     android:versionCode="1"
-    android:versionName="1.0.0" >
+    android:versionName="1.0.10" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -29,16 +29,16 @@
         android:name=".GodotInstrumentation"
         android:icon="@mipmap/icon"
         android:label="@string/godot_project_name_string"
-        android:targetPackage="com.hawlagames.$genname" />
+        android:targetPackage="studio.blessed.$genname" />
     <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" /> <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
     <permission
-        android:name="com.hawlagames.grascut.permission.C2D_MESSAGE"
+        android:name="studio.blessed.grascut.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.hawlagames.grascut.permission.C2D_MESSAGE" /> <!-- c2dm RECEIVE are basic requirements for push messages through Google's FCM -->
+    <uses-permission android:name="studio.blessed.grascut.permission.C2D_MESSAGE" /> <!-- c2dm RECEIVE are basic requirements for push messages through Google's FCM -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Required, makes sure notifications are delivered on time. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!--
@@ -165,7 +165,7 @@
             <intent-filter android:priority="999" >
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 
-                <category android:name="com.hawlagames.grascut" />
+                <category android:name="studio.blessed.grascut" />
             </intent-filter>
         </receiver>
 
@@ -287,12 +287,12 @@
 
         <provider
             android:name="com.google.android.gms.ads.MobileAdsInitProvider"
-            android:authorities="com.hawlagames.grascut.mobileadsinitprovider"
+            android:authorities="studio.blessed.grascut.mobileadsinitprovider"
             android:exported="false"
             android:initOrder="100" />
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.hawlagames.grascut.firebaseinitprovider"
+            android:authorities="studio.blessed.grascut.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
@@ -303,7 +303,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.hawlagames.grascut.androidx-startup"
+            android:authorities="studio.blessed.grascut.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.work.WorkManagerInitializer"

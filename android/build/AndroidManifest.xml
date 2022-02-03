@@ -56,7 +56,7 @@
             android:theme="@style/GodotAppSplashTheme"
             android:launchMode="singleTask"
             android:excludeFromRecents="false"
-            android:screenOrientation="landscape"
+            android:screenOrientation="potrait"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
             android:resizeableActivity="false"
             tools:ignore="UnusedAttribute" >
@@ -79,7 +79,7 @@
 <!--CHUNK_APPLICATION_END-->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-5730577896277719~2737812589"/>
 
     </application>
 
