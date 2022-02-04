@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
+            "outputFile": "D:\\Workspaces\\Godot Project\\GrasCut\\android\\build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
             "map": [
                 {
-                    "source": "/Users/wlb-mac/GodotProject/02 - PROJECT/GrasCut/android/build/res/values-zh/godot_project_name_string.xml",
+                    "source": "D:\\Workspaces\\Godot Project\\GrasCut\\android\\build\\res\\values-zh\\godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",

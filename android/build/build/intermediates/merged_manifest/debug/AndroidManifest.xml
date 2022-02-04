@@ -118,6 +118,20 @@
         <service android:name="org.godotengine.godot.GodotDownloaderService" />
 
         <meta-data
+            android:name="org.godotengine.plugin.v1.GodotAdMob"
+            android:value="shinnil.godot.plugin.android.godotadmob.GodotAdMob" />
+        <meta-data
+            android:name="org.godotengine.plugin.v1.GodotOneSignal"
+            android:value="org.godot.onesignalplugin.GodotOneSignal" /> <!-- <meta-data -->
+        <!-- android:name="org.godot.onesignalplugin.LocalNotificationReceiver" -->
+        <!-- android:value="org.godot.onesignalplugin.LocalNotificationReceiver" /> -->
+        <service
+            android:name="org.godot.onesignalplugin.ForegroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":externalProcess" />
+
+        <meta-data
             android:name="org.godotengine.plugin.v1.GodotUnityAds"
             android:value="org.godotengine.godotunityadsplugin.GodotUnityAds" />
 
@@ -153,20 +167,6 @@
         <meta-data
             android:name="org.godotengine.plugin.v1.RateMe"
             android:value="ru.mobilap.rateme.RateMe" />
-        <meta-data
-            android:name="org.godotengine.plugin.v1.GodotOneSignal"
-            android:value="org.godot.onesignalplugin.GodotOneSignal" /> <!-- <meta-data -->
-        <!-- android:name="org.godot.onesignalplugin.LocalNotificationReceiver" -->
-        <!-- android:value="org.godot.onesignalplugin.LocalNotificationReceiver" /> -->
-        <service
-            android:name="org.godot.onesignalplugin.ForegroundService"
-            android:enabled="true"
-            android:exported="false"
-            android:process=":externalProcess" />
-
-        <meta-data
-            android:name="org.godotengine.plugin.v1.GodotAdMob"
-            android:value="shinnil.godot.plugin.android.godotadmob.GodotAdMob" />
 
         <receiver
             android:name="com.onesignal.FCMBroadcastReceiver"
@@ -255,7 +255,18 @@
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <provider
+            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+            android:authorities="studio.blessed.grascut.mobileadsinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
 
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
@@ -290,18 +301,8 @@
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
-        </service> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
-        <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent" />
+        </service>
 
-        <provider
-            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
-            android:authorities="studio.blessed.grascut.mobileadsinitprovider"
-            android:exported="false"
-            android:initOrder="100" />
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="studio.blessed.grascut.firebaseinitprovider"

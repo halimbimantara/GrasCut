@@ -14,11 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://lib/admob-lib/admob.gd"
 }, {
-"base": "Control",
-"class": "BPBP_Main",
-"language": "GDScript",
-"path": "res://addons/bpb_placement/bpbp_main.gd"
-}, {
 "base": "Node",
 "class": "OneSignal",
 "language": "GDScript",
@@ -31,7 +26,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "AdMob": "res://lib/admob-lib/icon.png",
-"BPBP_Main": "",
 "OneSignal": "res://lib/onesignal-plugin-api/onesignal.png",
 "UnityAdsAPI": ""
 }
